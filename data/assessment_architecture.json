@@ -1,10 +1,4 @@
 {
-  "assumptions_to_validate": [
-    "ASSUMPTION: The team of 20 currently lacks AI fluency and will require significant upskilling or managed turnover.",
-    "ASSUMPTION: Compensation band for London/Prague is aligned with EMEA benchmarks (e.g. \u00a3100k-\u00a3150k per Ravio data), which is significantly lower than US peers ($200k+). We must validate if this budget secures &#x27;Adoptive AI fluency&#x27;.",
-    "ASSUMPTION: The CPO manages this role, indicating a heavily product-integrated commercial strategy, possibly Product-Led Growth (PLG) paired with AI sales.",
-    "ASSUMPTION: &#x27;AI-driven merchant onboarding&#x27; implies current manual processes have high friction or cost that need immediate reduction."
-  ],
   "performance_profile": [
     "Outcome 1: Redesign the primary revenue growth motion around AI-driven sales and automated merchant onboarding within the first 6 months.",
     "Outcome 2: Evaluate, restructure, and upskill the 20-person commercial team (sales, AM, ops) to execute the new tech-led GTM strategy.",
