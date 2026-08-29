@@ -1,0 +1,42 @@
+{
+  "market_signals": [
+    {
+      "signal_type": "layoff",
+      "company": "Groupon",
+      "summary": "May 2026 restructuring (Project Foundry) cut 400 positions (25% of workforce) to automate operations, including replacing human merchant outreach with AI voice agents. COO Jiri Ponrt resigned.",
+      "source_url": "https://layoffhedge.com",
+      "relevance": "Directly explains the mandate for an AI-fluent VP Commercial to drive the new AI sales motion and replace the old org."
+    },
+    {
+      "signal_type": "acquisition",
+      "company": "Yelp",
+      "summary": "Yelp acquired RepairPal for $80M in cash in late 2024 to expand its auto services platform.",
+      "source_url": "https://yelp-ir.com",
+      "relevance": "Shows aggressive expansion in local services by Tier 2 competitor."
+    }
+  ],
+  "title_taxonomy": [
+    "VP Commercial",
+    "VP Sales",
+    "Head of Revenue",
+    "VP Merchant Success",
+    "VP Merchant Acquisition"
+  ],
+  "company_tiers": {
+    "tier_1": [
+      "Travelzoo",
+      "Wowcher",
+      "Fever"
+    ],
+    "tier_2": [
+      "Yelp",
+      "Tripadvisor",
+      "Rakuten"
+    ],
+    "tier_3": [
+      "Square",
+      "Toast",
+      "Shopify"
+    ]
+  }
+}

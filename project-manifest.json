@@ -1,0 +1,14 @@
+{
+  "client_name": "Groupon",
+  "role": "VP, Commercial",
+  "linkedin_auth": "local_chrome",
+  "google_sheet_edit_url": "https://docs.google.com/spreadsheets/d/1pFHZSybBc74ZRwbbEL7snQPfTb87idGO_1TKzdnUM6I/edit?usp=sharing",
+  "google_sheet_csv_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSi5VqmXNMjtL5jMRXkL52OtZrOhZmVEZnyuNTDfPgPG37ysfZjSwO4Nls2QRGmcrydDPPechP8I9Vu/pub?gid=0&single=true&output=csv",
+  "execution_graph": {
+    "brand-scraper":       {"depends_on": [],                                                              "outputs": ["context/brand_tokens.json"]},
+    "intelmate":           {"depends_on": [],                                                              "outputs": ["context/market_intel.json", "context/qualitative_insights.json"]},
+    "interview-architect": {"depends_on": ["context/role_mandate.json", "context/market_intel.json"],      "outputs": ["context/assessment_architecture.json"]},
+    "talent-sourcer":      {"depends_on": ["context/market_intel.json", "context/qualitative_insights.json", "context/assessment_architecture.json"], "outputs": ["context/candidate_pipeline.json"]},
+    "data-translator":     {"depends_on": ["ALL context/*.json files"],                                    "outputs": ["template/data/*.json"]}
+  }
+}

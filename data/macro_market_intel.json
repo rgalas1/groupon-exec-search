@@ -1,0 +1,8 @@
+{
+  "kpis": {
+    "median_comp_emea": 130000,
+    "median_comp_us": 241757,
+    "comp_spread_emea": "100000 - 160000",
+    "comp_spread_us": "120000 - 403000"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "competitors": [
+    {
+      "name": "Travelzoo",
+      "tier": 1,
+      "threat_vector": "Direct competitor in deals/experiences marketplace. Legacy tech stack limits talent quality."
+    },
+    {
+      "name": "Wowcher",
+      "tier": 1,
+      "threat_vector": "UK-focused daily deals competitor. Discount-driven model with limited tech innovation."
+    },
+    {
+      "name": "Fever",
+      "tier": 1,
+      "threat_vector": "Modern, data-driven experiences platform. Strong talent pool for commercial leaders with tech fluency."
+    },
+    {
+      "name": "Yelp",
+      "tier": 2,
+      "threat_vector": "Local services giant. Aggressive expansion via acquisition (RepairPal). US-centric talent."
+    },
+    {
+      "name": "Tripadvisor",
+      "tier": 2,
+      "threat_vector": "Global travel platform. Strong brand but legacy commercial architecture."
+    },
+    {
+      "name": "Rakuten",
+      "tier": 2,
+      "threat_vector": "Global e-commerce conglomerate. AdTech-heavy commercial talent."
+    },
+    {
+      "name": "Square",
+      "tier": 3,
+      "threat_vector": "Competitor profile extracted from market intel."
+    },
+    {
+      "name": "Toast",
+      "tier": 3,
+      "threat_vector": "Restaurant SaaS platform. Strong bench of VP-level commercial leaders with AI/tech GTM experience."
+    },
+    {
+      "name": "Shopify",
+      "tier": 3,
+      "threat_vector": "Tier-1 commerce tech. Elite EMEA commercial operators with AI-integrated platform experience."
+    }
+  ]
+}

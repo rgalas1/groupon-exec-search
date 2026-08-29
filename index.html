@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Executive Search & Talent Intelligence Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <style>
+        :root {
+            --brand-primary: #53A318;
+            --brand-secondary: #000000;
+            --brand-mint: #F0Fdf4;
+            --brand-yellow: #FCF5E3;
+            --brand-dark: #16170F;
+            --brand-teal: #53A318;
+            --white: #FFFFFF;
+            --off-white: #F9FAFB;
+            --font-heading: 'Open Sans', 'Inter', sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --font-body: 'Open Sans', 'Inter', sans-serif;
+            
+            /* Intel Dashboard Colors */
+            --bg-color: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #64748B;
+            --accent-primary: #53A318;
+            --accent-secondary: #86efac;
+            --border-color: #E5E7EB;
+            --success: #10B981;
+            --font-intel: 'Open Sans', 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--brand-mint);
+            color: var(--brand-dark);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--brand-dark);
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand-logo h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            letter-spacing: -2px;
+            color: var(--brand-dark);
+            text-transform: lowercase;
+            margin-bottom: 2px;
+        }
+
+        .brand-logo span {
+            font-family: var(--font-intel);
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 400;
+            text-transform: none;
+        }
+
+        nav { display: flex; gap: 1rem; }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            color: var(--brand-dark);
+            font-family: var(--font-intel);
+            font-weight: 300;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            text-transform: none;
+        }
+        
+        .nav-btn.active {
+            font-weight: 400;
+        }
+        
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--brand-teal);
+        }
+
+        .nav-btn:hover { color: var(--brand-teal); }
+
+        /* --- Main Layout --- */
+        .container { max-width: 1400px; margin: 2rem auto; padding: 0 1.5rem; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* --- PIPELINE KANBAN STYLES --- */
+        .mandate-card { background: var(--brand-yellow); border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .mandate-header { padding: 1.25rem 1.75rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: var(--brand-dark); color: var(--white); user-select: none; }
+        .mandate-header h2 { font-family: var(--font-heading); font-weight: 300; font-size: 1.35rem; text-transform: none; }
+        .mandate-toggle { font-family: var(--font-intel); font-weight: 300; font-size: 1rem; text-transform: none; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; } .mandate-toggle span { font-size: 0.8rem; font-family: var(--font-intel); }
+        .mandate-body { padding: 1.75rem; display: none; }
+        .mandate-body.open { display: block; }
+        .mandate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .mandate-section h3 { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 0.6rem; text-transform: uppercase; border-bottom: 2px solid var(--brand-dark); padding-bottom: 0.25rem; }
+        .mandate-section ul { list-style: none; font-size: 0.95rem; font-family: var(--font-intel); }
+        .mandate-section li { margin-bottom: 0.5rem; padding-left: 14px; position: relative; }
+        .mandate-section li::before { content: "■"; position: absolute; left: 0; color: var(--brand-teal); font-size: 0.7rem; top: 4px; }
+        
+        .controls-panel { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; background: var(--white); padding: 1rem 1.25rem; border-radius: 4px; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .search-box { flex: 1; min-width: 280px; }
+        .search-box input { width: 100%; padding: 0.7rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: var(--font-intel); font-size: 0.9rem; outline: none; background: var(--off-white); }
+        .filter-group { display: flex; gap: 0.75rem; }
+        .filter-select { padding: 0.7rem 1rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: var(--font-intel); font-weight: 600; font-size: 0.85rem; background: var(--off-white); outline: none; cursor: pointer; }
+
+        .kanban-board { display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 2rem; align-items: flex-start; }
+        .kanban-column { background: rgba(255, 255, 255, 0.5); min-width: 330px; width: 330px; border-radius: 4px; padding: 1rem; border: none; }
+        .kanban-header { font-family: var(--font-heading); font-size: 1rem; text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--brand-dark); display: flex; justify-content: space-between; align-items: center; }
+        .kanban-count { background: var(--brand-dark); color: var(--white); padding: 2px 10px; border-radius: 20px; font-size: 0.85rem; font-family: var(--font-intel); font-weight: bold; }
+        
+        .candidate-card { background: var(--white); border-radius: 4px; padding: 1.25rem; margin-bottom: 1rem; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .candidate-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(22,23,15,0.08), 0 4px 8px rgba(22,23,15,0.04); }
+        .candidate-name { font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; font-size: 1.15rem; letter-spacing: -0.3px; margin-bottom: 0.25rem; color: var(--brand-dark); }
+        .candidate-meta { font-size: 0.85rem; color: #666; margin-bottom: 0.75rem; font-family: var(--font-intel); }
+        .badge { display: inline-block; padding: 4px 10px; background: var(--brand-yellow); border: none; font-family: var(--font-intel); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; border-radius: 4px; letter-spacing: 0.3px; color: var(--brand-dark); }
+        .card-preview { font-size: 0.95rem; margin-bottom: 1.25rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: #333; }
+        .card-actions { display: flex; gap: 0.75rem; }
+        .btn-action { flex: 1; padding: 0.7rem; border: none; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 600; cursor: pointer; border-radius: 4px; letter-spacing: 0.3px; text-align: center; text-decoration: none; text-transform: uppercase; transition: background 0.2s; }
+        .btn-view { background: var(--brand-dark); color: var(--white); }
+        .btn-view:hover { background: #333; }
+        .btn-linkedin { background: var(--brand-teal); color: var(--white); }
+        .btn-linkedin:hover { background: #009970; }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: none; justify-content: center; align-items: center; z-index: 2000; padding: 1.5rem; }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.2s ease; }
+        .modal-card { background: var(--white); border: none; max-width: 650px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative; border-radius: 4px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; background: var(--brand-dark); color: var(--white); border: none; width: 40px; height: 40px; border-radius: 50%; font-family: var(--font-heading); font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+        .modal-close:hover { background: #333; }
+        .modal-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+        .modal-section h4 { font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 0.75rem; font-size: 0.95rem; }
+
+        /* --- INTEL DASHBOARD STYLES --- */
+        .intel-tab-wrapper { font-family: var(--font-intel); }
+        .dashboard-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .card { background: var(--card-bg); border: none; border-radius: 4px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .card-header { margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        .card-header h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin: 0; font-family: var(--font-heading); text-transform: uppercase; }
+        .kpi-card { grid-column: span 3; display: flex; flex-direction: column; justify-content: center; }
+        .kpi-value { font-size: 2.5rem; font-weight: 700; color: var(--brand-teal); line-height: 1.2; }
+        .kpi-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .chart-card-large { grid-column: span 8; }
+        .chart-card-small { grid-column: span 4; }
+        
+        .vp-header-box { background: var(--brand-dark); color: white; padding: 2rem; border-radius: 4px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+        .vp-header-text h2 { font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .vp-header-text p { color: #94A3B8; max-width: 600px; margin: 0; font-family: var(--font-intel); }
+        
+        .comp-card { background: white; border-left: 4px solid var(--brand-teal); padding: 1.5rem; border-radius: 4px; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); margin-bottom: 1rem; border-top: none; border-right: none; border-bottom: none; }
+        .comp-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem; font-family: var(--font-heading); text-transform: uppercase; }
+        .comp-company { color: var(--brand-teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .comp-details { display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .comp-salary { font-size: 1.25rem; font-weight: 700; color: var(--success); }
+        
+        .live-btn { display: inline-block; background: var(--bg-color); border: 1px solid var(--border-color); padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; color: var(--text-main); text-decoration: none; transition: background 0.2s; }
+        .live-btn:hover { background: #E2E8F0; }
+
+        .filters-area { display: flex; gap: 1rem; margin-bottom: 1.5rem; background: white; padding: 1rem; border-radius: 4px; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .intel-filter-group { display: flex; flex-direction: column; gap: 0.25rem; flex: 1; }
+        .intel-filter-group label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+        .intel-filter-group select { padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: var(--font-intel); }
+        
+        .table-card { grid-column: span 12; }
+        table.dataTable { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+        table.dataTable thead th { background: #F1F5F9; border-bottom: 1px solid var(--border-color); padding: 1rem; text-align: left; font-weight: 600; color: var(--text-main); font-family: var(--font-heading); text-transform: uppercase; }
+        table.dataTable tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); }
+        
+        .intel-badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+        .badge-vp { background: var(--brand-yellow); color: var(--brand-dark); }
+        .badge-dir { background: var(--off-white); color: var(--brand-dark); }
+        .badge-mgr { background: var(--off-white); color: var(--brand-dark); }
+        .badge-ic { background: var(--off-white); color: var(--brand-dark); }
+
+        /* Qualitative Styles Restored */
+        .qualitative-insights { margin-bottom: 2rem; background: var(--white); border: none; border-radius: 4px; padding: 2rem; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .qualitative-insights h3 { font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 1rem; border-bottom: 2px solid var(--brand-dark); padding-bottom: 0.5rem; }
+        .signal-list { list-style: none; margin-bottom: 2rem; font-family: var(--font-intel); font-size: 0.95rem; }
+        .signal-list li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+        .signal-list li::before { content: "►"; position: absolute; left: 0; color: var(--brand-teal); font-size: 0.8rem; }
+        
+        .battle-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 1rem; }
+        .battle-card { background: var(--off-white); border: none; padding: 1.5rem; border-radius: 4px; }
+        .battle-card h4 { font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 1rem; color: var(--brand-dark); border-bottom: 3px solid var(--brand-teal); display: inline-block; padding-bottom: 0.25rem; }
+        .battle-card p { font-family: var(--font-intel); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .battle-card .talk-track { background: var(--brand-yellow); border: none; padding: 1.25rem; margin-top: 1rem; font-style: italic; font-size: 0.95rem; font-family: var(--font-body); }
+        
+        .exec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+        .exec-card { background: var(--off-white); border: none; padding: 1.5rem; border-radius: 4px; }
+        .exec-card h4 { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--brand-dark); }
+
+        /* Region Toggle */
+        .region-toggle-container { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; background: var(--white); padding: 1rem; border-radius: 4px; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
+        .region-btn { padding: 0.6rem 1.5rem; background: var(--off-white); border: 1px solid var(--border-color); border-radius: 4px; font-family: var(--font-intel); font-weight: 600; font-size: 0.9rem; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
+        .region-btn:hover { background: #E2E8F0; }
+        .region-btn.active { background: var(--brand-teal); color: white; border-color: var(--brand-teal); }
+
+        /* Screening Summaries Styles */
+        .screening-column { min-width: 380px !important; max-width: 380px !important; }
+        .screening-card { background-color: var(--off-white) !important; border: 3px solid var(--brand-yellow) !important; padding: 1.5rem !important; }
+        .summary-section { margin-bottom: 0.5rem; font-family: var(--font-intel); font-size: 0.95rem; line-height: 1.5; color: #222; }
+        .summary-subhead { font-family: var(--font-heading); font-size: 0.85rem; text-transform: uppercase; color: var(--brand-dark); margin-top: 1rem; margin-bottom: 0.25rem; border-bottom: 2px solid var(--brand-teal); display: inline-block; padding-bottom: 2px; font-weight: 700; }
+        .roi-warning { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 0.75rem; margin-top: 1.5rem; font-size: 0.9rem; color: #856404; font-family: var(--font-intel); border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="brand-logo">
+                <h1 id="brand-name">Brand</h1>
+                <span id="brand-tagline">Tagline</span>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="switchTab('pipeline-tab', this)">Candidate Pipeline</button>
+                <button class="nav-btn" onclick="switchTab('stack-rank-tab', this)">Screening Summaries</button>
+                <button class="nav-btn" onclick="switchTab('general-intel', this)">Macro Market Intel</button>
+                <button class="nav-btn" onclick="switchTab('vp-intel', this)">Role Mandate & Intel</button>
+                <button class="nav-btn" onclick="switchTab('raw-data', this)">Live Database</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- TAB 1: PIPELINE -->
+        <div id="pipeline-tab" class="tab-content active">
+            <div class="mandate-card">
+                <div class="mandate-header" onclick="toggleMandate()">
+                    <h2 id="mandate-title">Search mandate summary</h2>
+                    <span class="mandate-toggle" id="mandate-toggle-text">Expand overview <span style="font-size:0.75rem; border:1px solid rgba(255,255,255,0.3); border-radius:50%; padding:2px 5px;">+</span></span>
+                </div>
+                <div class="mandate-body" id="mandate-body">
+                    <p id="mandate-primary" style="font-family: var(--font-intel); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; font-weight: 300;">
+                    </p>
+                    <div class="mandate-grid" id="mandate-grid">
+                    </div>
+                </div>
+            </div>
+            <div class="controls-panel">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search candidate, company, or notes..." oninput="filterCandidates()">
+                </div>
+                <div class="filter-group">
+                    <select id="profile-filter" class="filter-select" onchange="filterCandidates()">
+                        <option value="ALL">All Profile Archetypes</option>
+                    </select>
+                </div>
+            </div>
+            <div id="loading-state" style="font-family: var(--font-heading); padding: 2rem; text-align: center;">Loading live pipeline...</div>
+            <div class="kanban-board" id="kanban-board"></div>
+        </div>
+
+        <!-- TAB 1.5: STACK RANK -->
+        <div id="stack-rank-tab" class="tab-content">
+            <div class="kanban-board" id="stack-rank-board"></div>
+        </div>
+
+        <!-- TAB 2: MACRO MARKET INTEL (REDESIGNED) -->
+        <div id="general-intel" class="tab-content intel-tab-wrapper">
+            
+            <!-- Dynamic Region Toggle -->
+            <div class="region-toggle-container">
+                <button class="region-btn active" onclick="setRegion('Global', this)">Global View</button>
+                <button class="region-btn" onclick="setRegion('US', this)">US Only</button>
+                <button class="region-btn" onclick="setRegion('LATAM', this)">LATAM Only</button>
+                <button class="region-btn" onclick="setRegion('EMEA', this)">EMEA Only</button>
+            </div>
+
+            <!-- Dynamic KPIs -->
+            <div class="dashboard-grid">
+                <div class="card kpi-card">
+                    <div class="kpi-value" id="kpi-total-roles">-</div>
+                    <div class="kpi-label">Verified Open Roles</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-value" id="kpi-avg-salary">-</div>
+                    <div class="kpi-label">Avg. Base Salary</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-value" id="kpi-remote-pct">-</div>
+                    <div class="kpi-label">% Remote Flexibility</div>
+                </div>
+                <div class="card kpi-card">
+                    <div class="kpi-value" id="kpi-transparency">-</div>
+                    <div class="kpi-label">Comp Transparency</div>
+                </div>
+            </div>
+
+            <!-- Restored Qualitative Insights -->
+            <div class="qualitative-insights">
+                <h3>Strategic Signals & Competitor Org Structures</h3>
+                <ul class="signal-list" id="signal-list">
+                </ul>
+
+                <h3 style="margin-top: 2rem;">Executive Poaching Battle Cards</h3>
+                <div class="battle-cards-grid" id="battle-cards-grid">
+                </div>
+            </div>
+
+            <!-- Dynamic Charts -->
+            <div class="dashboard-grid">
+                <div class="card chart-card-large" style="grid-column: span 12;">
+                    <div class="card-header"><h3>Active Requisitions</h3></div>
+                    <canvas id="companyVolumeChart"></canvas>
+                </div>
+
+                <div class="card chart-card-large" style="grid-column: span 12;">
+                    <div class="card-header"><h3>Compensation Spread</h3></div>
+                    <canvas id="compSpreadChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: VP DELIVERY FOCUS -->
+        <div id="vp-intel" class="tab-content intel-tab-wrapper">
+            <div class="vp-header-box">
+                <div class="vp-header-text">
+                    <h2 id="target-role-title">Leadership Focus</h2>
+                    <p>Live, verified requisitions for executive leadership extracted directly from competitor platforms.</p>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 0.85rem; color: #94A3B8; text-transform: uppercase; font-weight: 600;">Benchmark</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: white;" id="target-role-benchmark">-</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card" style="grid-column: span 12;">
+                    <div class="card-header"><h3>Live Verified Requisitions</h3></div>
+                    <div id="vp-roles-container" style="max-height: 500px; overflow-y: auto; padding-right: 10px;">
+                        <!-- Generated via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: LIVE DATABASE (RAW DATA) -->
+        <div id="raw-data" class="tab-content intel-tab-wrapper">
+            <div class="filters-area">
+                <div class="intel-filter-group">
+                    <label>Company</label>
+                    <select id="filter-company" onchange="applyTableFilters()">
+                        <option value="">All Companies</option>
+                    </select>
+                </div>
+                <div class="intel-filter-group">
+                    <label>Function</label>
+                    <select id="filter-function" onchange="applyTableFilters()">
+                        <option value="">All Functions</option>
+                    </select>
+                </div>
+                <div class="intel-filter-group">
+                    <label>Region</label>
+                    <select id="filter-region" onchange="applyTableFilters()">
+                        <option value="">All Regions</option>
+                        <option value="US">US</option>
+                        <option value="LATAM">LATAM</option>
+                        <option value="EMEA">EMEA</option>
+                        <option value="Global">Global</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card table-card">
+                <table id="rolesTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role Title</th>
+                            <th>Level</th>
+                            <th>Function</th>
+                            <th>Location</th>
+                            <th>Region</th>
+                            <th>Salary Range</th>
+                            <th>Proof Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rolesTableBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Popup for Kanban -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModalDirect()">X</button>
+            <span class="badge" id="modal-badge">Profile</span>
+            <h2 class="candidate-name" id="modal-name">Name</h2>
+            <div class="candidate-meta" id="modal-meta">Title • Company • Location</div>
+            <div class="modal-section">
+                <h4>The Good (Initial JD Alignment)</h4>
+                <p id="modal-good">-</p>
+            </div>
+            <div class="modal-section">
+                <h4>Trade-Offs & Potential Risks</h4>
+                <p id="modal-tradeoff">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- JSON DATA FETCHING ---
+        let liveData = [];
+        let candidateData = [];
+        let GOOGLE_SHEET_CSV_URL = '';
+
+        async function loadJSON(filename) {
+            try {
+                const res = await fetch(`data/${filename}`);
+                if(!res.ok) throw new Error('Network response was not ok');
+                return await res.json();
+            } catch (e) {
+                console.error(`Error loading ${filename}:`, e);
+                return null;
+            }
+        }
+
+        async function initData() {
+            // Load Project Config
+            const config = await loadJSON('project_config.json');
+            if (config) {
+                document.getElementById('brand-name').innerText = config.client_name;
+                document.getElementById('brand-tagline').innerText = config.client_tagline;
+                document.title = config.client_name + " | Executive Search Hub";
+                GOOGLE_SHEET_CSV_URL = config.google_sheet_csv_url;
+            }
+
+            // Load Brand Tokens
+            const brand = await loadJSON('brand_tokens.json');
+            if (brand) {
+                if (brand.colors && brand.colors.primary) {
+                    document.documentElement.style.setProperty('--brand-teal', brand.colors.primary);
+                    document.documentElement.style.setProperty('--accent-primary', brand.colors.primary);
+                }
+                if (brand.colors && brand.colors.secondary) {
+                    document.documentElement.style.setProperty('--brand-dark', brand.colors.secondary);
+                }
+            }
+
+            // Load Mandate
+            const mandateData = await loadJSON('role_mandate.json');
+            if (mandateData) {
+                document.getElementById('mandate-title').innerText = mandateData.title || "Search mandate summary";
+                document.getElementById('target-role-title').innerText = (mandateData.title || "").split('(')[0].replace('Search mandate summary', '').trim() || "Leadership Focus";
+                document.getElementById('mandate-primary').innerHTML = `<strong>Primary Mandate:</strong> ${mandateData.primary_mandate || ""}`;
+                
+                const grid = document.getElementById('mandate-grid');
+                if (mandateData.sections) {
+                    grid.innerHTML = mandateData.sections.map(section => `
+                        <div class="mandate-section">
+                            <h3>${section.title}</h3>
+                            <ul>${section.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+                        </div>
+                    `).join('');
+                }
+            }
+
+            // Load Qualitative Insights
+            const qualData = await loadJSON('qualitative_insights.json');
+            if (qualData) {
+                if (qualData.signals) {
+                    document.getElementById('signal-list').innerHTML = qualData.signals.map(s => `<li>${s}</li>`).join('');
+                }
+                if (qualData.battle_cards) {
+                    document.getElementById('battle-cards-grid').innerHTML = qualData.battle_cards.map(card => `
+                        <div class="battle-card">
+                            <h4>${card.target}</h4>
+                            <p><strong>Target:</strong> ${card.profile}</p>
+                            <p><strong>Vulnerability:</strong> ${card.vulnerability}</p>
+                            <div class="talk-track">${card.talk_track}</div>
+                        </div>
+                    `).join('');
+                }
+            }
+
+            // Load Market Intel
+            const intelData = await loadJSON('market_intel.json');
+            if (intelData) {
+                if (intelData.comp_findings) {
+                    liveData = intelData.comp_findings;
+                } else if (Array.isArray(intelData)) {
+                    liveData = intelData;
+                }
+                updateDashboardView();
+                populateFilters();
+                populateTable();
+                populateVPSection();
+            }
+
+            // Load Pipeline CSV
+            if (GOOGLE_SHEET_CSV_URL) {
+                Papa.parse(GOOGLE_SHEET_CSV_URL, {
+                    download: true, header: true, skipEmptyLines: true,
+                    complete: function(results) {
+                        if(results.data && results.data.length > 0) {
+                            candidateData = results.data.map(row => {
+                                let rawLinkedIn = '';
+                                for (let key in row) {
+                                    if (key.toLowerCase().includes('linkedin')) { rawLinkedIn = row[key]; break; }
+                                }
+                                return {
+                                    Candidate: row['Candidate'] || row['Candidate Name'] || '',
+                                    BackgroundProfile: (row['Background Profile'] || row['Background'] || '').trim(),
+                                    CurrentCompany: row['Current Company'] || '',
+                                    Location: row['Location'] || '',
+                                    TheGood: row['The Good (Initial JD Alignment)'] || row['The Good'] || 'No notes provided.',
+                                    TheTradeOff: row['The Trade-Off'] || 'None noted.',
+                                    Status: normalizeStatus(row['Status']),
+                                    LinkedIn: formatUrl(rawLinkedIn),
+                                    StackRankBucket: row['Stank Rank Bucket'] || row['Stack Rank Bucket'] || '',
+                                    CalibratedScore: row['Calibrated Score'] || '',
+                                    Salary: row['Salary'] || '',
+                                    SpecificLocation: row['Specific Location'] || '',
+                                    ExecSummary: row['Exec summary'] || row['Exec Summary'] || '',
+                                    Verticals: row['Verticals'] || row['Industries'] || ''
+                                };
+                            });
+                        }
+                        
+                        // Populate Profile Filters
+                        const profiles = [...new Set(candidateData.map(c => c.BackgroundProfile).filter(p => p !== ''))];
+                        const filterSelect = document.getElementById('profile-filter');
+                        profiles.forEach(p => {
+                            const option = document.createElement('option');
+                            option.value = p;
+                            option.innerText = p;
+                            filterSelect.appendChild(option);
+                        });
+
+                        renderKanban();
+                        renderStackRank();
+                        document.getElementById('loading-state').style.display = 'none';
+                    },
+                    error: function(err) {
+                        document.getElementById('loading-state').innerText = "Error loading data from Google Sheets.";
+                    }
+                });
+            } else {
+                document.getElementById('loading-state').innerText = "No Google Sheet URL configured.";
+            }
+        }
+
+        // --- KANBAN LOGIC ---
+        const stages = ["Mapped (Pre-Outreach)", "Outreach Active", "Screening (Rob)", "Charles Review", "Keep Warm / Bench", "Archived"];
+
+        function normalizeStatus(rawStatus) {
+            if (!rawStatus) return stages[0];
+            let lower = String(rawStatus).toLowerCase();
+            if (lower.includes('outreach')) return stages[1];
+            if (lower.includes('screen') || lower.includes('rob')) return stages[2];
+            if (lower.includes('charles') || lower.includes('review')) return stages[3];
+            if (lower.includes('warm') || lower.includes('bench')) return stages[4];
+            if (lower.includes('archiv') || lower.includes('pass')) return stages[5];
+            return stages[0]; 
+        }
+
+        function forceOpenLink(url) {
+            if (url && url !== '#') { window.open(url, '_blank'); } 
+            else { alert("No valid LinkedIn URL found for this candidate."); }
+        }
+
+        function formatUrl(url) {
+            if (!url || typeof url !== 'string' || url.trim() === '') return '#';
+            let trimmed = url.trim();
+            if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://')) { return 'https://' + trimmed; }
+            return trimmed;
+        }
+
+        // --- GLOBALS FOR CHARTS/TABLE ---
+        let intelDataTable;
+        let currentRegion = 'Global'; 
+        let charts = {}; 
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initData();
+        });
+
+        // --- UI LOGIC ---
+        function renderKanban(dataToRender = candidateData) {
+            const board = document.getElementById('kanban-board');
+            board.innerHTML = '';
+            stages.forEach(stage => {
+                const stageCards = dataToRender.filter(c => c.Status === stage);
+                let colHTML = `
+                    <div class="kanban-column">
+                        <div class="kanban-header">
+                            ${stage} <span class="kanban-count">${stageCards.length}</span>
+                        </div>
+                `;
+                stageCards.forEach((c, idx) => {
+                    colHTML += `
+                        <div class="candidate-card">
+                            ${c.BackgroundProfile ? `<span class="badge">${c.BackgroundProfile}</span>` : ''}
+                            <div class="candidate-name">${c.Candidate}</div>
+                            <div class="candidate-meta">${c.CurrentCompany} • ${c.Location}</div>
+                            ${c.Verticals ? `<div class="candidate-meta" style="margin-top:-5px; font-weight:600; color:var(--text-muted);">Verticals: ${c.Verticals}</div>` : ''}
+                            <div class="card-preview">${c.TheGood}</div>
+                            <div class="card-actions">
+                                <button class="btn-action btn-view" onclick="openModal(${candidateData.indexOf(c)})">Notes</button>
+                                <button class="btn-action btn-linkedin" onclick="forceOpenLink('${c.LinkedIn}')">LinkedIn</button>
+                            </div>
+                        </div>
+                    `;
+                });
+                colHTML += `</div>`;
+                board.innerHTML += colHTML;
+            });
+        }
+
+        function renderStackRank() {
+            const board = document.getElementById('stack-rank-board');
+            if (!board) return;
+            board.innerHTML = '';
+            
+            // Dynamically get all buckets from data
+            const stackBuckets = [...new Set(candidateData.map(c => c.StackRankBucket).filter(b => b && b.trim() !== ''))].sort();
+            
+            let rankedData = candidateData.filter(c => c.StackRankBucket && c.StackRankBucket.trim() !== '');
+            
+            stackBuckets.forEach(bucket => {
+                let bucketCards = rankedData.filter(c => c.StackRankBucket === bucket);
+                bucketCards.sort((a, b) => parseFloat(b.CalibratedScore || 0) - parseFloat(a.CalibratedScore || 0));
+                
+                let colHTML = `
+                    <div class="kanban-column screening-column">
+                        <div class="kanban-header">
+                            ${bucket} <span class="kanban-count">${bucketCards.length}</span>
+                        </div>
+                `;
+                bucketCards.forEach((c) => {
+                    let summaryHTML = c.ExecSummary || "";
+                    let salaryDisplay = (c.Salary || "").replace(/\$/g, '');
+                    summaryHTML = summaryHTML.replace(/\$/g, 'USD ');
+                    
+                    let roiText = "";
+                    let roiMatch = summaryHTML.match(/(ROI WARNING:[^\.]*\.)\s*/i);
+                    if (roiMatch) {
+                        roiText = roiMatch[1].replace(/\*?\*?ROI WARNING:\*?\*?/i, 'ROI WARNING:');
+                        summaryHTML = summaryHTML.replace(roiMatch[0], "");
+                    }
+
+                    summaryHTML = summaryHTML.replace(/Overview:/gi, '<span class="summary-subhead">Overview</span><br>');
+                    summaryHTML = summaryHTML.replace(/Strengths:/gi, '</div><div class="summary-section"><span class="summary-subhead">Strengths</span><br>');
+                    summaryHTML = summaryHTML.replace(/Trade-offs:/gi, '</div><div class="summary-section"><span class="summary-subhead">Trade-offs</span><br>');
+                    summaryHTML = summaryHTML.replace(/Cultural Fit:/gi, '</div><div class="summary-section"><span class="summary-subhead">Cultural Fit</span><br>');
+                    summaryHTML = '<div class="summary-section">' + summaryHTML + '</div>';
+
+                    if (roiText) {
+                        summaryHTML += `<div class="roi-warning"><strong>${roiText.replace('', '').trim()}</strong></div>`;
+                    }
+
+                    colHTML += `
+                        <div class="candidate-card screening-card" style="padding-bottom:1rem; cursor:default;">
+                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
+                                <div class="candidate-name" style="margin:0; font-size:1.15rem; line-height:1.2; background: var(--off-white); display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px;">${c.Candidate}</div>
+                            </div>
+                            <div class="candidate-meta" style="margin-bottom:5px; font-size:0.9rem;"><strong>${c.CurrentCompany}</strong></div>
+                            <div class="candidate-meta" style="margin-bottom:5px; font-size:0.85rem;">Location: ${c.SpecificLocation || c.Location}</div>
+                            <div class="candidate-meta" style="margin-bottom:5px; font-size:0.9rem; color:var(--brand-teal); font-weight:700;">${salaryDisplay}</div>
+                            ${c.Verticals ? `<div class="candidate-meta" style="margin-bottom:12px; font-size:0.85rem; color:var(--text-muted); font-weight:600;">Verticals: ${c.Verticals}</div>` : ''}
+                            <div class="card-preview" style="font-size:0.85rem; line-height:1.45; padding-top:12px; border-top:1px solid var(--border-color); margin-top:5px; -webkit-line-clamp: unset; color:var(--text-main);">
+                                ${summaryHTML}
+                            </div>
+                            <div class="card-actions" style="margin-top:15px;">
+                                <button class="btn-action btn-linkedin" onclick="forceOpenLink('${c.LinkedIn}')" style="width:100%; padding:0.5rem; justify-content:center; border: 1px solid var(--brand-teal); background-color: white; color: var(--brand-teal);">LinkedIn Profile</button>
+                            </div>
+                        </div>
+                    `;
+                });
+                colHTML += `</div>`;
+                board.innerHTML += colHTML;
+            });
+        }
+
+        function openModal(index) {
+            const c = candidateData[index];
+            document.getElementById('modal-name').innerText = c.Candidate;
+            document.getElementById('modal-badge').innerText = c.BackgroundProfile;
+            document.getElementById('modal-meta').innerText = `${c.CurrentCompany} • ${c.Location}`;
+            document.getElementById('modal-good').innerText = c.TheGood;
+            document.getElementById('modal-tradeoff').innerText = c.TheTradeOff;
+            document.getElementById('modal-overlay').classList.add('active');
+        }
+        function closeModal(e) { if(e.target.id === 'modal-overlay') { document.getElementById('modal-overlay').classList.remove('active'); } }
+        function closeModalDirect() { document.getElementById('modal-overlay').classList.remove('active'); }
+
+        function filterCandidates() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const profileFilter = document.getElementById('profile-filter').value;
+            const filtered = candidateData.filter(item => {
+                const matchesSearch = (
+                    item.Candidate.toLowerCase().includes(query) ||
+                    item.CurrentCompany.toLowerCase().includes(query) ||
+                    item.TheGood.toLowerCase().includes(query) ||
+                    item.Location.toLowerCase().includes(query)
+                );
+                let matchesProfile = true;
+                if (profileFilter !== 'ALL') {
+                    matchesProfile = (item.BackgroundProfile === profileFilter);
+                }
+                return matchesSearch && matchesProfile;
+            });
+            renderKanban(filtered);
+        }
+
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        function toggleMandate() {
+            const body = document.getElementById('mandate-body');
+            const toggleText = document.getElementById('mandate-toggle-text');
+            body.classList.toggle('open');
+            toggleText.innerHTML = body.classList.contains('open') ? 'Collapse overview <span style="font-size:0.75rem; border:1px solid rgba(0,0,0,0.1); border-radius:50%; padding:2px 6px;">-</span>' : 'Expand overview <span style="font-size:0.75rem; border:1px solid rgba(0,0,0,0.1); border-radius:50%; padding:2px 5px;">+</span>';
+        }
+
+        // --- DASHBOARD FILTERING LOGIC ---
+        function setRegion(region, btnElement) {
+            currentRegion = region;
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+            updateDashboardView();
+        }
+
+        function getFilteredData() {
+            if (currentRegion === 'Global') return liveData;
+            return liveData.filter(d => d.region === currentRegion);
+        }
+
+        function updateDashboardView() {
+            const data = getFilteredData();
+            
+            document.getElementById('kpi-total-roles').innerText = data.length;
+            
+            const remoteRoles = data.filter(d => d.location.includes('Remote') || d.location.includes('Hybrid')).length;
+            document.getElementById('kpi-remote-pct').innerText = data.length > 0 ? Math.round((remoteRoles / data.length) * 100) + '%' : '0%';
+            
+            const compRoles = data.filter(d => d.minComp);
+            document.getElementById('kpi-transparency').innerText = data.length > 0 ? Math.round((compRoles.length / data.length) * 100) + '%' : '0%';
+
+            const mgrExecComps = data.filter(d => (d.level === 'VP' || d.level === 'Director' || d.level === 'Manager') && d.minComp);
+            if(mgrExecComps.length > 0) {
+                const avg = mgrExecComps.reduce((acc, curr) => acc + (curr.minComp + curr.maxComp)/2, 0) / mgrExecComps.length;
+                document.getElementById('kpi-avg-salary').innerText = '$' + Math.round(avg/1000) + 'k';
+                document.getElementById('target-role-benchmark').innerText = '$' + Math.round(avg/1000) + 'k Base';
+            } else {
+                document.getElementById('kpi-avg-salary').innerText = '-';
+                document.getElementById('target-role-benchmark').innerText = 'Benchmark Data Unavailable';
+            }
+
+            renderCharts(data);
+        }
+
+        function renderCharts(data) {
+            Object.values(charts).forEach(c => c.destroy());
+
+            const compCounts = {};
+            data.forEach(d => { compCounts[d.company] = (compCounts[d.company] || 0) + 1; });
+            const sortedComps = Object.entries(compCounts).sort((a,b) => b[1]-a[1]);
+            
+            charts.vol = new Chart(document.getElementById('companyVolumeChart'), {
+                type: 'bar',
+                data: {
+                    labels: sortedComps.map(i => i[0]),
+                    datasets: [{ label: 'Active Reqs', data: sortedComps.map(i => i[1]), backgroundColor: '#3B82F6', borderRadius: 4 }]
+                },
+                options: { responsive: true, plugins: { legend: { display: false } } }
+            });
+
+            const execData = data.filter(d => d.minComp).sort((a,b) => b.maxComp - a.maxComp);
+            charts.spread = new Chart(document.getElementById('compSpreadChart'), {
+                type: 'bar',
+                data: {
+                    labels: execData.map(d => d.company + " (" + d.level + ")"),
+                    datasets: [
+                        { label: 'Min Salary', data: execData.map(d => d.minComp), backgroundColor: '#94A3B8' },
+                        { label: 'Max Salary', data: execData.map(d => d.maxComp), backgroundColor: '#3B82F6' }
+                    ]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+            });
+        }
+
+        function getLevelBadge(level) {
+            return `<span class="intel-badge">${level}</span>`;
+        }
+
+        function populateFilters() {
+            const comps = [...new Set(liveData.map(d => d.company))].sort();
+            const funcs = [...new Set(liveData.map(d => d.function))].sort();
+            comps.forEach(c => $('#filter-company').append(`<option value="${c}">${c}</option>`));
+            funcs.forEach(f => $('#filter-function').append(`<option value="${f}">${f}</option>`));
+        }
+
+        function populateTable() {
+            const tbody = document.getElementById('rolesTableBody');
+            tbody.innerHTML = '';
+            liveData.forEach(role => {
+                const compStr = role.minComp ? `$${Math.round(role.minComp/1000)}k - $${Math.round(role.maxComp/1000)}k` : 'Not Disclosed';
+                tbody.innerHTML += `
+                    <tr>
+                        <td style="font-weight:600;">${role.company}</td>
+                        <td>${role.title}</td>
+                        <td>${getLevelBadge(role.level)}</td>
+                        <td>${role.function}</td>
+                        <td>${role.location}</td>
+                        <td>${role.region}</td>
+                        <td style="font-weight:600; color: var(--success);">${compStr}</td>
+                        <td><a href="${role.url}" target="_blank" class="live-btn">View ATS</a></td>
+                    </tr>
+                `;
+            });
+            intelDataTable = $('#rolesTable').DataTable({ pageLength: 25, order: [[6, 'desc']] });
+        }
+
+        function applyTableFilters() {
+            const company = $('#filter-company').val();
+            const func = $('#filter-function').val();
+            const region = $('#filter-region').val();
+            const level = $('#filter-level').val();
+            intelDataTable.column(0).search(company).draw();
+            intelDataTable.column(3).search(func).draw();
+            intelDataTable.column(5).search(region).draw();
+            intelDataTable.column(2).search(level).draw();
+        }
+
+        function populateVPSection() {
+            const container = document.getElementById('vp-roles-container');
+            const vpRoles = liveData.filter(d => (d.level === 'VP' || d.level === 'Director' || d.level === 'Manager')).sort((a,b) => b.maxComp - a.maxComp);
+            
+            container.innerHTML = ``;
+            
+            vpRoles.forEach(role => {
+                const compStr = role.minComp ? `$${(role.minComp).toLocaleString()} - $${(role.maxComp).toLocaleString()}` : 'Confidential / Unlisted';
+                container.innerHTML += `
+                    <div class="comp-card">
+                        <div style="display:flex; justify-content: space-between;">
+                            <div>
+                                <div class="comp-title">${role.title}</div>
+                                <div class="comp-company">${role.company}</div>
+                            </div>
+                            <div class="comp-salary">${compStr}</div>
+                        </div>
+                        <div class="comp-details">
+                            <span>Location: ${role.location}</span>
+                            <span>Function: ${role.function}</span>
+                        </div>
+                        <a href="${role.url}" target="_blank" class="live-btn">Verify ATS Posting</a>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

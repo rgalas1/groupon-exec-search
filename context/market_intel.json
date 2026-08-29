@@ -1,0 +1,129 @@
+{
+  "comp_findings": [
+    {
+      "company": "Tripadvisor",
+      "title": "Senior Director of Machine Learning (Experiences)",
+      "level": "Senior Director",
+      "function": "Commercial Strategy & Machine Learning / Product",
+      "location": "Needham, MA / New York, NY",
+      "region": "US",
+      "minComp": 220000,
+      "maxComp": 285000,
+      "url": "https://boards.greenhouse.io/tripadvisor",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Tripadvisor",
+      "title": "Associate Director, AMER Account Management & Planning",
+      "level": "Associate Director",
+      "function": "Commercial / Sales Planning",
+      "location": "New York, NY",
+      "region": "US",
+      "minComp": 175000,
+      "maxComp": 200000,
+      "url": "https://boards.greenhouse.io/tripadvisor",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Toast",
+      "title": "Vice President, Enterprise Sales",
+      "level": "VP",
+      "function": "Enterprise Sales / Commercial GTM",
+      "location": "Remote",
+      "region": "US",
+      "minComp": 198000,
+      "maxComp": 403000,
+      "url": "https://boards.greenhouse.io/toast",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Toast",
+      "title": "Regional Vice President (RVP), Sales",
+      "level": "VP",
+      "function": "Field Sales Leadership / Commercial GTM",
+      "location": "Remote",
+      "region": "US",
+      "minComp": 219000,
+      "maxComp": 403000,
+      "url": "https://boards.greenhouse.io/toast",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Fever",
+      "title": "Director, Commercial Product (Brand Partnerships)",
+      "level": "Director",
+      "function": "Commercial Product Monetization & AdTech",
+      "location": "Madrid, Spain / London, UK",
+      "region": "EMEA",
+      "minComp": 110000,
+      "maxComp": 160000,
+      "url": "https://careers.feverup.com/",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Fever",
+      "title": "Associate Director, Creative Strategy (Brand Partnerships)",
+      "level": "Associate Director",
+      "function": "Commercial Ad Strategy",
+      "location": "New York, NY",
+      "region": "US",
+      "minComp": 120000,
+      "maxComp": 140000,
+      "url": "https://careers.feverup.com/",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Square (Block)",
+      "title": "Head of Square Commercial Operations & Deal Excellence",
+      "level": "Head / Sr. Director",
+      "function": "Commercial Operations",
+      "location": "San Francisco, CA / US Remote",
+      "region": "US",
+      "minComp": 217800,
+      "maxComp": 326800,
+      "url": "https://boards.greenhouse.io/block",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Square (Block)",
+      "title": "Director of Field Sales (Northeast / NYC)",
+      "level": "Director",
+      "function": "Commercial Field Sales",
+      "location": "New York, NY",
+      "region": "US",
+      "minComp": 180000,
+      "maxComp": 297000,
+      "url": "https://boards.greenhouse.io/block",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Ravio Benchmark",
+      "title": "VP Sales",
+      "level": "VP",
+      "function": "Sales",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 100000,
+      "maxComp": 150000,
+      "url": "https://ravio.com",
+      "source_tier": "TIER_2_VENDOR"
+    }
+  ],
+  "research_ledger": {
+    "queries_executed": [
+      "Groupon competitors",
+      "site:boards.greenhouse.io OR site:jobs.lever.co OR site:jobs.ashbyhq.com \"Travelzoo\" OR \"Wowcher\" OR \"Fever\" OR \"Yelp\" OR \"Tripadvisor\" OR \"Rakuten\" OR \"Square\" OR \"Toast\" OR \"Shopify\"",
+      "\"Travelzoo careers\" OR \"Wowcher careers\" OR \"Fever careers\" ATS lever greenhouse workable",
+      "site:ravio.com \"VP Commercial\" OR \"VP Sales\" salary benchmark Europe OR UK",
+      "\"Groupon\" OR \"Yelp\" layoff OR restructuring OR \"acquired\" 2023 2024"
+    ],
+    "urls_visited": [
+      "https://boards-api.greenhouse.io/v1/boards/tripadvisor/jobs?content=true",
+      "https://boards-api.greenhouse.io/v1/boards/toast/jobs?content=true",
+      "https://boards-api.greenhouse.io/v1/boards/fever/jobs?content=true",
+      "https://boards-api.greenhouse.io/v1/boards/block/jobs?content=true"
+    ],
+    "stop_condition_triggered": "STOP-1",
+    "blocked_urls": []
+  }
+}

@@ -1,0 +1,412 @@
+[
+  {
+    "Candidate": "Sam Conway",
+    "Background Profile": "TravelTech BD",
+    "Current Company": "Travelzoo",
+    "Location": "UK / EMEA",
+    "The Good (Initial JD Alignment)": "Global BD experience in consumer travel platforms.",
+    "The Trade-Off": "Travelzoo is a legacy marketplace; lacks cutting-edge tech-led transformation or AI fluency.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Sam+Conway+Travelzoo"
+  },
+  {
+    "Candidate": "Lisa Oswald",
+    "Background Profile": "Member Services / CS",
+    "Current Company": "Travelzoo",
+    "Location": "US",
+    "The Good (Initial JD Alignment)": "SVP-level global leadership experience.",
+    "The Trade-Off": "Customer service focused, not frontline commercial/sales. Location mismatch (US vs EMEA).",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Lisa+Oswald+Travelzoo"
+  },
+  {
+    "Candidate": "Jon Kissack",
+    "Background Profile": "Sales Manager",
+    "Current Company": "Travelzoo",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Strong individual contributor and tactical sales manager.",
+    "The Trade-Off": "Insufficient seniority and strategic scope; not a transformative commercial leader.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/jon-kissack"
+  },
+  {
+    "Candidate": "Susanne Lettenmeier",
+    "Background Profile": "Regional Commercial Media",
+    "Current Company": "Travelzoo",
+    "Location": "Germany (EMEA)",
+    "The Good (Initial JD Alignment)": "Commercial leadership in a core EMEA market (Germany).",
+    "The Trade-Off": "Regional focus (Germany) rather than pan-EMEA. Legacy media model over AI/SaaS transformation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Susanne+Lettenmeier+Travelzoo"
+  },
+  {
+    "Candidate": "Fran Perry",
+    "Background Profile": "Individual Contributor Sales",
+    "Current Company": "Wowcher",
+    "Location": "UK",
+    "The Good (Initial JD Alignment)": "B2B sales experience in a high-volume marketplace.",
+    "The Trade-Off": "IC level (Sales Lead). Vastly underqualified for VP Commercial. *[Note: 5th consecutive rejection]*",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Fran+Perry+Wowcher"
+  },
+  {
+    "Candidate": "Dan Martin",
+    "Background Profile": "E-Commerce MD",
+    "Current Company": "Wowcher",
+    "Location": "UK",
+    "The Good (Initial JD Alignment)": "MD-level P&L owner in digital e-commerce.",
+    "The Trade-Off": "Wowcher is discount-driven, not a premier tech-led SaaS or AI-driven platform. Missing transformation DNA.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Dan+Martin+Wowcher"
+  },
+  {
+    "Candidate": "Jay Elstar-Richmond",
+    "Background Profile": "National Sales Head",
+    "Current Company": "Wowcher",
+    "Location": "UK",
+    "The Good (Initial JD Alignment)": "Head of Sales level experience.",
+    "The Trade-Off": "National scope (UK only) rather than pan-EMEA. Discount business model lacks complex tech-led GTM.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Jay+Elstar-Richmond+Wowcher"
+  },
+  {
+    "Candidate": "George Oborne",
+    "Background Profile": "Marketplace Executive",
+    "Current Company": "Wowcher",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Proven ability to steer a mature marketplace business at the CEO level.",
+    "The Trade-Off": "Over-indexed on operational turnarounds of legacy platforms rather than forward-looking, tech-led commercial innovation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/george-oborne"
+  },
+  {
+    "Candidate": "Sana Ali Aamir",
+    "Background Profile": "High-Growth Regional GM",
+    "Current Company": "Fever",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Exceptional track record scaling a modern, data-driven marketplace across Europe; highly analytical.",
+    "The Trade-Off": "Heavily indexed on live entertainment rather than pure B2B/SaaS tech, though her marketplace dynamics are highly relevant.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/sana-ali-aamir"
+  },
+  {
+    "Candidate": "Roc\u00edo Trujillo Alba",
+    "Background Profile": "Regional GM",
+    "Current Company": "Fever",
+    "Location": "Spain (EMEA)",
+    "The Good (Initial JD Alignment)": "Regional GM at a modern data-driven tech company.",
+    "The Trade-Off": "Scope is limited to Southern Europe; VP Commercial requires broader pan-EMEA oversight.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Roc\u00edo+Trujillo+Alba+Fever"
+  },
+  {
+    "Candidate": "Justin Reid",
+    "Background Profile": "Global Partnerships",
+    "Current Company": "Tripadvisor",
+    "Location": "UK / EMEA",
+    "The Good (Initial JD Alignment)": "Global partnerships scale at a major travel tech platform.",
+    "The Trade-Off": "Legacy platform. Likely lacks the cutting-edge AI fluency and agile commercial transformation required.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Justin+Reid+Tripadvisor"
+  },
+  {
+    "Candidate": "Jacquie Pelusi",
+    "Background Profile": "Commercial Ops",
+    "Current Company": "Tripadvisor",
+    "Location": "US / UK",
+    "The Good (Initial JD Alignment)": "Senior Director level in Commercial Operations.",
+    "The Trade-Off": "Ops-focused rather than a frontline revenue driver. Not a fit for a GTM VP Commercial role.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Jacquie+Pelusi+Tripadvisor"
+  },
+  {
+    "Candidate": "Tara Davies",
+    "Background Profile": "Regional Sales",
+    "Current Company": "Tripadvisor",
+    "Location": "EMEA",
+    "The Good (Initial JD Alignment)": "Regional EMEA sales experience.",
+    "The Trade-Off": "Director level; stepping into a pan-EMEA VP Commercial role is too steep a trajectory.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Tara+Davies+Tripadvisor"
+  },
+  {
+    "Candidate": "Kristina Raptovaia",
+    "Background Profile": "Affiliate Partnerships",
+    "Current Company": "Rakuten",
+    "Location": "EMEA",
+    "The Good (Initial JD Alignment)": "Partnerships leadership at a global tech conglomerate.",
+    "The Trade-Off": "Affiliate marketing focus is incongruent with a tech-led/AI commercial transformation mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Kristina+Raptovaia+Rakuten"
+  },
+  {
+    "Candidate": "James Collins",
+    "Background Profile": "AdTech Executive",
+    "Current Company": "Rakuten Advertising",
+    "Location": "UK / EMEA",
+    "The Good (Initial JD Alignment)": "SVP level commercial leadership.",
+    "The Trade-Off": "Deeply anchored in Media/AdTech rather than core SaaS or AI-driven enterprise transformation. *[Note: 5th consecutive rejection]*",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=James+Collins+Rakuten"
+  },
+  {
+    "Candidate": "Chris Edwards",
+    "Background Profile": "Media Sales Director",
+    "Current Company": "Rakuten Advertising",
+    "Location": "EMEA",
+    "The Good (Initial JD Alignment)": "EMEA media sales experience.",
+    "The Trade-Off": "Director level, and heavily AdTech indexed. Misses the AI/transformation mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Chris+Edwards+Rakuten"
+  },
+  {
+    "Candidate": "Harry Johns",
+    "Background Profile": "Sales Director",
+    "Current Company": "Rakuten Advertising",
+    "Location": "EMEA",
+    "The Good (Initial JD Alignment)": "Sales management in the EMEA region.",
+    "The Trade-Off": "Too junior (Director) and wrong sector focus (Advertising).",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Harry+Johns+Rakuten"
+  },
+  {
+    "Candidate": "Katy Mitchell",
+    "Background Profile": "UK Commercial Head",
+    "Current Company": "Rakuten Advertising",
+    "Location": "UK",
+    "The Good (Initial JD Alignment)": "Head of Commercial title.",
+    "The Trade-Off": "UK scope only, not EMEA. Legacy AdTech.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Katy+Mitchell+Rakuten"
+  },
+  {
+    "Candidate": "Samina Hussain-Letch",
+    "Background Profile": "Fintech Executive",
+    "Current Company": "Square",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Strong pedigree in scaling tech-led financial infrastructure and commerce solutions in the UK.",
+    "The Trade-Off": "Fintech-heavy; needs vetting on adaptability to broader commercial transformations outside of payments.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/samina-hussain-letch"
+  },
+  {
+    "Candidate": "Jason Lalor",
+    "Background Profile": "European Fintech MD",
+    "Current Company": "Square",
+    "Location": "Ireland (EMEA)",
+    "The Good (Initial JD Alignment)": "Pan-European executive leadership at a premier tech disruptor.",
+    "The Trade-Off": "Has operated at the MD/CEO Europe level; might view a VP Commercial role as a step back.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Jason+Lalor+Square"
+  },
+  {
+    "Candidate": "Ana Munoz",
+    "Background Profile": "International GM",
+    "Current Company": "Toast",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Proven operator scaling a modern, tech-forward platform internationally with full P&L ownership.",
+    "The Trade-Off": "Need to pressure-test her direct involvement in AI-driven operational efficiencies versus standard market expansion.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/ana-munoz"
+  },
+  {
+    "Candidate": "Deann Evans",
+    "Background Profile": "Tier-1 Tech Executive",
+    "Current Company": "Shopify",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Elite operator managing a massive EMEA P&L for a cutting-edge, AI-integrated commerce platform.",
+    "The Trade-Off": "High compensation expectations and may view the role as a step down unless the equity upside is exceptional.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/deann-evans"
+  },
+  {
+    "Candidate": "Daniel Kurrasch",
+    "Background Profile": "EMEA Sales Director",
+    "Current Company": "Shopify",
+    "Location": "EMEA",
+    "The Good (Initial JD Alignment)": "Strong tech-led sales experience at a tier-1 company.",
+    "The Trade-Off": "Director level. A jump to VP Commercial requires seeing proof of strategic capability beyond execution.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Daniel+Kurrasch+Shopify"
+  },
+  {
+    "Candidate": "Jed Nachman",
+    "Background Profile": "Tech COO",
+    "Current Company": "Yelp",
+    "Location": "US",
+    "The Good (Initial JD Alignment)": "Scaled massive commercial and revenue operations.",
+    "The Trade-Off": "US-based (violates EMEA mandate). Overqualified (COO). Legacy local search, not AI.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Jed+Nachman+Yelp"
+  },
+  {
+    "Candidate": "Chad Richard",
+    "Background Profile": "Corp Dev / BD SVP",
+    "Current Company": "Yelp",
+    "Location": "US",
+    "The Good (Initial JD Alignment)": "SVP level business development.",
+    "The Trade-Off": "US-based (violates EMEA mandate). M&A/Corp Dev focused rather than frontline sales transformation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/search/results/people/?keywords=Chad+Richard+Yelp"
+  },
+  {
+    "Candidate": "Dan Martin",
+    "Background Profile": "Marketplace / Travel Leader",
+    "Current Company": "Wowcher",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Deep experience managing a complex P&L and driving volume in a high-transaction marketplace environment.",
+    "The Trade-Off": "Wowcher operates on a legacy tech and brand footprint; lacks the sophisticated AI-driven commercial transformation required for this mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/dan-martin-wowcher"
+  },
+  {
+    "Candidate": "Paul Constable",
+    "Background Profile": "Travel Vertical Leader",
+    "Current Company": "Wowcher",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Strong domain expertise in travel inventory and yield management.",
+    "The Trade-Off": "Vertical-specific execution rather than cross-functional, AI-fluent commercial transformation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/paul-constable"
+  },
+  {
+    "Candidate": "Ady Good",
+    "Background Profile": "Brand Partnerships",
+    "Current Company": "Wowcher",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Capable in negotiating strategic inventory partnerships.",
+    "The Trade-Off": "Lacks the required scale, P&L ownership, and tech fluency for a VP Commercial mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/ady-good"
+  },
+  {
+    "Candidate": "Jamie Lavers",
+    "Background Profile": "Regional Vertical Manager",
+    "Current Company": "Wowcher",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Solid track record in managing UK travel supply.",
+    "The Trade-Off": "Too junior for the VP Commercial scope; no demonstrated experience in tech-led transformation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/jamie-lavers"
+  },
+  {
+    "Candidate": "James Clarke",
+    "Background Profile": "Regional GM",
+    "Current Company": "Travelzoo",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Experienced in leading regional commercial operations for a global travel media brand.",
+    "The Trade-Off": "Travelzoo's model is largely traditional media/email-driven; lacks exposure to modern AI-led commercial architectures. (Note: 5 consecutive rejections from legacy platforms)",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/james-clarke-travelzoo"
+  },
+  {
+    "Candidate": "Grant Dudson",
+    "Background Profile": "Creative Partnerships",
+    "Current Company": "Fever",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Strong global network and creative execution in partnerships.",
+    "The Trade-Off": "Profile is too creative/brand-focused; lacks the rigorous, data-driven commercial operating cadence required.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/grant-dudson"
+  },
+  {
+    "Candidate": "Andrew Foggin",
+    "Background Profile": "Vertical Executive",
+    "Current Company": "Fever/DICE",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Deep experience driving revenue in modern, tech-forward ticketing and entertainment platforms.",
+    "The Trade-Off": "May be too entrenched in the music vertical; needs vetting on broad commercial AI integration.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/andrew-foggin"
+  },
+  {
+    "Candidate": "Brett Lang",
+    "Background Profile": "SaaS Sales Leader",
+    "Current Company": "Toast",
+    "Location": "United Kingdom / EMEA",
+    "The Good (Initial JD Alignment)": "Rigorous B2B SaaS sales background; understands high-velocity, tech-led revenue engines.",
+    "The Trade-Off": "A pure sales leader rather than a holistic commercial strategist with cross-functional transformational experience.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/brett-lang"
+  },
+  {
+    "Candidate": "Gavin Flood",
+    "Background Profile": "Growth Marketing Leader",
+    "Current Company": "Toast",
+    "Location": "Ireland / EMEA",
+    "The Good (Initial JD Alignment)": "Deep expertise in scalable, tech-enabled growth and demand generation across international markets.",
+    "The Trade-Off": "Marketing-centric rather than a unified commercial leader; lacks enterprise sales architecture experience.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/gavin-flood"
+  },
+  {
+    "Candidate": "Birk Angermann",
+    "Background Profile": "Revenue Leader",
+    "Current Company": "Shopify",
+    "Location": "Germany / EMEA",
+    "The Good (Initial JD Alignment)": "Architect of modern revenue engines at a tier-1 commerce tech company; deeply familiar with AI-driven sales tooling.",
+    "The Trade-Off": "Primarily focused on revenue rather than holistic commercial/product strategy, but highly relevant.",
+    "Status": "Approved",
+    "Linkedin URL": "https://www.linkedin.com/in/birk-angermann"
+  },
+  {
+    "Candidate": "Rakhee Jogia",
+    "Background Profile": "AdTech Leader",
+    "Current Company": "Rakuten Advertising",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Extensive experience managing international commercial operations in a data-heavy, programmatic environment.",
+    "The Trade-Off": "AdTech specific; may struggle to pivot to a generalized AI-led commercial transformation mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/rakhee-jogia"
+  },
+  {
+    "Candidate": "Angus Sladden",
+    "Background Profile": "Client Services",
+    "Current Company": "Rakuten Advertising",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Solid operational background in managing large-scale client relationships.",
+    "The Trade-Off": "Too far removed from the core strategic revenue generation and transformative tech architecture required.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/angus-sladden"
+  },
+  {
+    "Candidate": "Stuart Keith",
+    "Background Profile": "Media Partnerships",
+    "Current Company": "Rakuten TV",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "Specialist in structuring complex global ad strategies and media partnerships.",
+    "The Trade-Off": "Niche focus on CTV/Media; does not align with a holistic VP Commercial transformation mandate.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/stuart-keith"
+  },
+  {
+    "Candidate": "Patrick Hooykaas",
+    "Background Profile": "Regional Managing Director",
+    "Current Company": "TheFork / Tripadvisor",
+    "Location": "Netherlands / EMEA",
+    "The Good (Initial JD Alignment)": "Strong operational background running regional P&Ls within a digital marketplace.",
+    "The Trade-Off": "Marketplace mechanics are relevant, but TripAdvisor/TheFork operate on legacy architectures compared to modern AI standards.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/patrick-hooykaas"
+  },
+  {
+    "Candidate": "Sarah Dines",
+    "Background Profile": "Global Travel Executive",
+    "Current Company": "Viator / Tripadvisor",
+    "Location": "United Kingdom",
+    "The Good (Initial JD Alignment)": "C-level commercial experience scaling a massive global tours & activities marketplace.",
+    "The Trade-Off": "Scale is excellent, but technical fluency regarding AI-led commercial transformation is unproven. (Note: 5 consecutive rejections from legacy/AdTech profiles)",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/sarah-dines"
+  },
+  {
+    "Candidate": "Steven Paganelli",
+    "Background Profile": "Media & Partnerships",
+    "Current Company": "Tripadvisor",
+    "Location": "United States (Requires Relocation/Remote check)",
+    "The Good (Initial JD Alignment)": "Deep experience in global media monetization and destination partnerships.",
+    "The Trade-Off": "US-based (fails EMEA location mandate) and heavily indexed on traditional digital media sales rather than AI transformation.",
+    "Status": "Rejected",
+    "Linkedin URL": "https://www.linkedin.com/in/steven-paganelli"
+  }
+]

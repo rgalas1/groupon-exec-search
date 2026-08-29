@@ -1,0 +1,15 @@
+{
+  "tokens": {
+    "--brand-primary": "#53A318",
+    "--brand-secondary": "#333333",
+    "--brand-dark": "#111111",
+    "--brand-surface": "#FFFFFF",
+    "--font-heading": "Open Sans",
+    "--font-body": "Open Sans",
+    "--radius-button": "4px"
+  },
+  "provenance": {
+    "primary_color_source": "Vision Fallback",
+    "font_mapped_from": "Open Sans"
+  }
+}
