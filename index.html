@@ -566,7 +566,8 @@
 
             // Load Pipeline CSV
             if (GOOGLE_SHEET_CSV_URL) {
-                Papa.parse(GOOGLE_SHEET_CSV_URL, {
+                const cacheBusterUrl = GOOGLE_SHEET_CSV_URL + "&t=" + new Date().getTime();
+                Papa.parse(cacheBusterUrl, {
                     download: true, header: true, skipEmptyLines: true,
                     complete: function(results) {
                         if(results.data && results.data.length > 0) {
