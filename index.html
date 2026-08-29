@@ -263,6 +263,7 @@
                 <button class="nav-btn" onclick="switchTab('stack-rank-tab', this)">Screening Summaries</button>
                 <button class="nav-btn" onclick="switchTab('general-intel', this)">Macro Market Intel</button>
                 <button class="nav-btn" onclick="switchTab('vp-intel', this)">Role Mandate & Intel</button>
+                <button class="nav-btn" onclick="switchTab('interview-process-tab', this)">Interview Process</button>
                 <button class="nav-btn" onclick="switchTab('raw-data', this)">Live Database</button>
             </nav>
         </div>
@@ -427,6 +428,16 @@
                 </table>
             </div>
         </div>
+        
+        <!-- TAB 5: INTERVIEW PROCESS -->
+        <div id="interview-process-tab" class="tab-content intel-tab-wrapper">
+            <div class="card" style="padding: 24px;">
+                <h2 style="margin-bottom: 24px; color: var(--brand-dark); font-family: 'Archivo Black', sans-serif;">Suggested Interview Process</h2>
+                <div id="interview-process-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Modal Popup for Kanban -->
@@ -506,20 +517,19 @@
 
             // Load Qualitative Insights
             const qualData = await loadJSON('qualitative_insights.json');
-            if (qualData) {
-                if (qualData.signals) {
-                    document.getElementById('signal-list').innerHTML = qualData.signals.map(s => `<li>${s}</li>`).join('');
-                }
-                if (qualData.battle_cards) {
-                    document.getElementById('battle-cards-grid').innerHTML = qualData.battle_cards.map(card => `
-                        <div class="battle-card">
-                            <h4>${card.target}</h4>
-                            <p><strong>Target:</strong> ${card.profile}</p>
-                            <p><strong>Vulnerability:</strong> ${card.vulnerability}</p>
-                            <div class="talk-track">${card.talk_track}</div>
-                        </div>
-                    `).join('');
-                }
+            if (qualData && qualData.market_signals) {
+                document.getElementById('signal-list').innerHTML = qualData.market_signals.map(s => `<li><strong>${s.company} (${s.signal_type}):</strong> ${s.summary} - <em>${s.relevance}</em> <a href="${s.source_url}" target="_blank">[Source]</a></li>`).join('');
+            }
+
+            // Load Strategic Battle Cards
+            const battleData = await loadJSON('strategic_battle_cards.json');
+            if (battleData && battleData.competitors) {
+                document.getElementById('battle-cards-grid').innerHTML = battleData.competitors.map(card => `
+                    <div class="battle-card">
+                        <h4>${card.name} (Tier ${card.tier})</h4>
+                        <p><strong>Threat Vector:</strong> ${card.threat_vector}</p>
+                    </div>
+                `).join('');
             }
 
             // Load Market Intel
@@ -534,6 +544,24 @@
                 populateFilters();
                 populateTable();
                 populateVPSection();
+            }
+
+            // Load Assessment Architecture
+            const assessmentData = await loadJSON('assessment_architecture.json');
+            if (assessmentData && assessmentData.stages) {
+                document.getElementById('interview-process-container').innerHTML = assessmentData.stages.map(stage => `
+                    <div style="border-bottom: 1px solid var(--gray-light); padding-bottom: 24px; margin-bottom: 24px;">
+                        <h3 style="color: var(--brand-teal); font-size: 1.25rem; font-weight: 600; margin-bottom: 12px;">Stage ${stage.stage_number}: ${stage.stage_name}</h3>
+                        <p style="margin-bottom: 8px;"><strong>Interviewer:</strong> ${stage.interviewer_persona} (${stage.duration_minutes} mins)</p>
+                        <p style="margin-bottom: 16px;"><strong>Competencies Covered:</strong> ${stage.competencies_covered.join(', ')}</p>
+                        <div style="background: var(--gray-light); padding: 16px; border-radius: 6px;">
+                            <p style="font-weight: 500; margin-bottom: 8px;">Core Question:</p>
+                            <p style="margin-bottom: 12px; font-style: italic;">"${stage.questions[0].question_text}"</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Look For:</strong> ${stage.questions[0].look_for}</p>
+                            <p style="font-size: 0.9rem; color: #dc2626;"><strong>Red Flags:</strong> ${stage.questions[0].red_flags}</p>
+                        </div>
+                    </div>
+                `).join('');
             }
 
             // Load Pipeline CSV
@@ -588,18 +616,17 @@
                 document.getElementById('loading-state').innerText = "No Google Sheet URL configured.";
             }
         }
-
         // --- KANBAN LOGIC ---
-        const stages = ["Mapped (Pre-Outreach)", "Outreach Active", "Screening (Rob)", "Charles Review", "Keep Warm / Bench", "Archived"];
+        const stages = ["Mapped (Pre-Outreach)", "Outreach Active", "Screening (Recruiter)", "Hiring Manager Review", "Keep Warm / Bench", "Archived"];
 
         function normalizeStatus(rawStatus) {
             if (!rawStatus) return stages[0];
             let lower = String(rawStatus).toLowerCase();
             if (lower.includes('outreach')) return stages[1];
             if (lower.includes('screen') || lower.includes('rob')) return stages[2];
-            if (lower.includes('charles') || lower.includes('review')) return stages[3];
+            if (lower.includes('hiring') || lower.includes('review') || lower.includes('charles')) return stages[3];
             if (lower.includes('warm') || lower.includes('bench')) return stages[4];
-            if (lower.includes('archiv') || lower.includes('pass')) return stages[5];
+            if (lower.includes('archiv') || lower.includes('pass') || lower.includes('reject')) return stages[5];
             return stages[0]; 
         }
 
