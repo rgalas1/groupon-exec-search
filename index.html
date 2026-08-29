@@ -474,13 +474,14 @@
                 return null;
             }
         }
-
         async function initData() {
             // Load Project Config
             const config = await loadJSON('project_config.json');
             if (config) {
-                document.getElementById('brand-name').innerText = config.client_name;
-                document.getElementById('brand-tagline').innerText = config.client_tagline;
+                const brandNameEl = document.getElementById('brand-name');
+                if (brandNameEl) brandNameEl.innerText = config.client_name;
+                const brandTaglineEl = document.getElementById('brand-tagline');
+                if (brandTaglineEl) brandTaglineEl.innerText = config.client_tagline;
                 document.title = config.client_name + " | Executive Search Hub";
                 GOOGLE_SHEET_CSV_URL = config.google_sheet_csv_url;
             }
@@ -494,6 +495,29 @@
                 }
                 if (brand.colors && brand.colors.secondary) {
                     document.documentElement.style.setProperty('--brand-dark', brand.colors.secondary);
+                }
+                
+                // Inject Fonts
+                if (brand.fonts) {
+                    const headingFont = brand.fonts['--font-heading'] || 'Archivo Black';
+                    const bodyFont = brand.fonts['--font-body'] || 'Inter';
+                    
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = `https://fonts.googleapis.com/css2?family=${headingFont.replace(/ /g, '+')}:wght@400;600;700;800&family=${bodyFont.replace(/ /g, '+')}:wght@300;400;500;600&display=swap`;
+                    document.head.appendChild(link);
+                    
+                    document.documentElement.style.setProperty('--font-heading', `"${headingFont}", sans-serif`);
+                    document.documentElement.style.setProperty('--font-body', `"${bodyFont}", sans-serif`);
+                }
+
+                // Inject Logo
+                if (brand.logo_url) {
+                    const logoContainer = document.querySelector('.brand-logo');
+                    if (logoContainer) {
+                        logoContainer.innerHTML = `<img src="${brand.logo_url}" alt="${config?.client_name || 'Brand'} Logo" style="max-height: 35px; margin-bottom: 5px;">
+                                                   <span id="brand-tagline" style="display:block; font-size:0.85rem; color:var(--text-muted);">${config?.client_tagline || ''}</span>`;
+                    }
                 }
             }
 

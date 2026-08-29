@@ -1,0 +1,279 @@
+- generic [ref=e1]:
+  - region [ref=e2]
+  - generic:
+    - region "Notifications":
+      - heading "0 notifications total" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic [ref=e7]:
+      - banner [ref=e8]:
+        - link "Skip to main content" [ref=e9] [cursor=pointer]:
+          - /url: "#main"
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "Navigate to recruiter homepage" [ref=e13] [cursor=pointer]:
+              - /url: /talent/hire
+            - navigation "Navigation menu" [ref=e24]:
+              - list [ref=e25]:
+                - listitem [ref=e26]:
+                  - generic [ref=e27]:
+                    - link "Projects" [ref=e29] [cursor=pointer]:
+                      - /url: /talent/projects
+                    - button "Expand projects menu" [ref=e33] [cursor=pointer]
+                - listitem [ref=e38]:
+                  - generic [ref=e39]:
+                    - link "Jobs" [ref=e41] [cursor=pointer]:
+                      - /url: /talent/jobs
+                    - button "Expand jobs menu" [ref=e45] [cursor=pointer]
+                - listitem [ref=e50]:
+                  - link "Campaigns" [ref=e52] [cursor=pointer]:
+                    - /url: /talent/projects?scFilters=%5B%7B%22sourcingChannelType%22%3A%22PIPELINE_BUILDER%22%7D%5D
+                - listitem [ref=e55]:
+                  - generic [ref=e56]:
+                    - link "Reports" [ref=e58] [cursor=pointer]:
+                      - /url: /talent/reports
+                    - button "Expand reports menu" [ref=e62] [cursor=pointer]
+          - generic [ref=e67]:
+            - generic [ref=e69]:
+              - link "Go to message inbox 2 new Recent InMail messages notifications" [ref=e71] [cursor=pointer]:
+                - /url: /talent/inbox/0
+                - generic [ref=e72]:
+                  - paragraph [ref=e73]: Go to message inbox
+                  - generic [ref=e75]:
+                    - generic [ref=e76]: "2"
+                    - generic [ref=e77]: 2 new Recent InMail messages notifications
+              - button "Expand the recent messages menu" [ref=e81] [cursor=pointer]
+            - generic [ref=e87]:
+              - generic [ref=e89] [cursor=pointer]:
+                - generic [ref=e90]: Notifications
+                - generic [ref=e92]:
+                  - generic [ref=e93]: "3"
+                  - generic [ref=e94]: 3 new notifications
+              - button "Expand the notifications menu" [ref=e98] [cursor=pointer]
+            - button "Open help window" [ref=e105] [cursor=pointer]:
+              - img "Help" [ref=e107]
+            - generic [ref=e113]:
+              - img "User menu" [ref=e116] [cursor=pointer]
+              - button "Expand the user menu" [ref=e118] [cursor=pointer]
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - generic [ref=e126]: Good evening, Robert
+            - generic [ref=e129]:
+              - generic [ref=e131]:
+                - generic [ref=e133]: Insert text to send to AI Copilot
+                - generic [ref=e137]:
+                  - textbox "Insert text to send to AI Copilot" [ref=e139]:
+                    - /placeholder: Get started by typing anything here
+                  - button "Open Prompt Templates" [ref=e142] [cursor=pointer]
+              - button [ref=e148] [cursor=pointer]:
+                - img "Open create dropdown" [ref=e149]
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - button "Searching for Senior Vice Presidents in United States to connect with for the first time" [ref=e153] [cursor=pointer]
+            - listitem [ref=e158]:
+              - button "CGO based on the west coast" [ref=e159] [cursor=pointer]
+            - listitem [ref=e164]:
+              - button "Load more suggested prompts" [ref=e165] [cursor=pointer]:
+                - generic [ref=e169]: More
+      - dialog "Hiring Assistant"
+      - main [ref=e170]:
+        - generic [ref=e171]:
+          - navigation [ref=e174]:
+            - link "Home" [ref=e175] [cursor=pointer]:
+              - /url: /talent/home
+            - link "Feedback" [ref=e176] [cursor=pointer]:
+              - /url: /talent/home/completed-feedback
+            - link "Reminders" [ref=e177] [cursor=pointer]:
+              - /url: /talent/home/reminders
+          - generic [ref=e183]:
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - heading "Projects with most engagement (10)" [level=2] [ref=e187]
+                - link "View all projects" [ref=e188] [cursor=pointer]:
+                  - /url: /talent/projects
+                  - generic [ref=e189]: View all
+              - list [ref=e191]:
+                - listitem [ref=e192]:
+                  - list [ref=e193]:
+                    - listitem [ref=e194]:
+                      - generic [ref=e196]:
+                        - generic [ref=e198]:
+                          - link [ref=e201] [cursor=pointer]:
+                            - /url: /talent/hire/1514792681/overview
+                            - heading "Sales RPO" [level=2] [ref=e202]
+                          - generic [ref=e207]:
+                            - generic [ref=e208]: Company name
+                            - generic [ref=e209]: Shapr3D
+                            - generic [ref=e211]: Project Owner
+                            - generic [ref=e212]: • Robert Galas
+                            - generic [ref=e213]: Date Created
+                            - generic [ref=e214]: • Created 6/30/2026
+                        - button "Triggers a dropdown containing more actions for this hiring project Sales RPO button" [ref=e220] [cursor=pointer]
+                        - generic [ref=e225]:
+                          - generic [ref=e227]:
+                            - button "27 active candidates. Open pipeline stages preview" [ref=e229] [cursor=pointer]: "27"
+                            - generic [ref=e230]: Active candidates
+                          - generic [ref=e232]:
+                            - link "InMail sent1" [ref=e233] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?projectId=1514792681
+                              - text: "1"
+                            - text: InMail sent
+                          - generic [ref=e235]:
+                            - link "InMails accepted0" [ref=e236] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?filter=ACCEPTED&projectId=1514792681
+                              - text: "0"
+                            - text: InMails accepted
+                        - generic [ref=e238]:
+                          - generic [ref=e239]:
+                            - heading "Review 25 open to work candidates" [level=3] [ref=e240]
+                            - paragraph [ref=e241]: Candidates that are actively job seeking
+                          - link "Review 25 open to work candidates" [ref=e243] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/talent/hire/1514792681/discover/automatedSourcing/review?collectionType=OPEN_TO_WORK
+                            - text: Review candidates
+                - listitem [ref=e244]:
+                  - list [ref=e245]:
+                    - listitem [ref=e246]:
+                      - generic [ref=e248]:
+                        - generic [ref=e250]:
+                          - link [ref=e253] [cursor=pointer]:
+                            - /url: /talent/hire/1538881577/overview
+                            - heading "VP Delivery" [level=2] [ref=e254]
+                          - generic [ref=e259]:
+                            - generic [ref=e260]: Company name
+                            - generic [ref=e261]: Shapr3D
+                            - generic [ref=e263]: Project Owner
+                            - generic [ref=e264]: • Robert Galas
+                            - generic [ref=e265]: Date Created
+                            - generic [ref=e266]: • Created 8/17/2026
+                        - button "Triggers a dropdown containing more actions for this hiring project VP Delivery button" [ref=e272] [cursor=pointer]
+                        - generic [ref=e277]:
+                          - generic [ref=e279]:
+                            - button "63 active candidates. Open pipeline stages preview" [ref=e281] [cursor=pointer]: "63"
+                            - generic [ref=e282]: Active candidates
+                          - generic [ref=e284]:
+                            - link "InMails sent42" [ref=e285] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?projectId=1538881577
+                              - text: "42"
+                            - text: InMails sent
+                          - generic [ref=e287]:
+                            - link "InMails accepted14" [ref=e288] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?filter=ACCEPTED&projectId=1538881577
+                              - text: "14"
+                            - text: InMails accepted
+                        - generic [ref=e290]:
+                          - generic [ref=e291]:
+                            - heading "View 2 unread messages" [level=3] [ref=e292]
+                            - paragraph [ref=e293]: "From: Federico Bignoli Alfaro +1 more"
+                          - link "View 2 unread messages" [ref=e295] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/talent/inbox/0/projects?projectId=1538881577&filter=unread
+                            - text: View messages
+                - listitem [ref=e296]:
+                  - list [ref=e297]:
+                    - listitem [ref=e298]:
+                      - generic [ref=e300]:
+                        - generic [ref=e302]:
+                          - link [ref=e305] [cursor=pointer]:
+                            - /url: /talent/hire/1537229521/overview
+                            - heading "Growth Director - EU (all)" [level=2] [ref=e306]
+                          - generic [ref=e311]:
+                            - generic [ref=e312]: Company name
+                            - generic [ref=e313]: Shapr3D
+                            - generic [ref=e315]: Project Owner
+                            - generic [ref=e316]: • Isabella Cross
+                            - generic [ref=e317]: Date Created
+                            - generic [ref=e318]: • Created 8/13/2026
+                        - button "Triggers a dropdown containing more actions for this hiring project Growth Director - EU (all) button" [ref=e324] [cursor=pointer]
+                        - generic [ref=e329]:
+                          - generic [ref=e331]:
+                            - button "14 active candidates. Open pipeline stages preview" [ref=e333] [cursor=pointer]: "14"
+                            - generic [ref=e334]: Active candidates
+                          - generic [ref=e336]:
+                            - link "InMails sent11" [ref=e337] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?projectId=1537229521
+                              - text: "11"
+                            - text: InMails sent
+                          - generic [ref=e339]:
+                            - link "InMails accepted4" [ref=e340] [cursor=pointer]:
+                              - /url: /talent/inbox/0/projects?filter=ACCEPTED&projectId=1537229521
+                              - text: "4"
+                            - text: InMails accepted
+                        - generic [ref=e342]:
+                          - generic [ref=e343]:
+                            - heading "Review 25 open to work candidates" [level=3] [ref=e344]
+                            - paragraph [ref=e345]: Candidates that are actively job seeking
+                          - link "Review 25 open to work candidates" [ref=e347] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/talent/hire/1537229521/discover/automatedSourcing/review?collectionType=OPEN_TO_WORK
+                            - text: Review candidates
+                - listitem [ref=e348]
+                - listitem [ref=e349]
+                - listitem [ref=e350]
+                - listitem [ref=e351]
+                - listitem [ref=e352]
+                - listitem [ref=e353]
+                - listitem [ref=e354]
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - heading "Continue recent searches" [level=2] [ref=e358]
+                - link "View all searches" [ref=e359] [cursor=pointer]:
+                  - /url: /talent/search/recruiter-search-history
+                  - generic [ref=e360]: View all
+              - 'link "Search 8/28/2026 Sales RPO: + (\"sales\" OR \"business development\") AND \"RPO\", + Senior Vice President OR CGO, + Chief Sales Officer OR Head of Sales, + United States … +1 filter" [ref=e363] [cursor=pointer]':
+                - /url: /talent/hire/1514792681/discover/recruiterSearch?searchHistoryId=20935174905&start=400&uiOrigin=HISTORY_SEARCH
+                - generic [ref=e364]:
+                  - generic [ref=e365]:
+                    - heading "Search" [level=2] [ref=e366]
+                    - generic [ref=e369]: 8/28/2026
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: "Sales RPO: + (\"sales\" OR \"business development\") AND \"RPO\", + Senior Vice President OR CGO, + Chief Sales Officer OR Head of Sales, + United States"
+                    - text: … +1 filter
+              - link "Search 8/27/2026 + (\"Growth Director\" OR \"Head of Growth\" OR \"Director of Growth\" OR \"Head of Produ..." [ref=e374] [cursor=pointer]:
+                - /url: /talent/search?searchHistoryId=21076042049&start=0&uiOrigin=HISTORY_SEARCH
+                - generic [ref=e375]:
+                  - generic [ref=e376]:
+                    - heading "Search" [level=2] [ref=e377]
+                    - generic [ref=e380]: 8/27/2026
+                  - generic [ref=e381]: + ("Growth Director" OR "Head of Growth" OR "Director of Growth" OR "Head of Produ...
+              - link "Search 8/27/2026 + (\"Growth Director\" OR \"Head of Growth\" OR \"Director of Product Growth\" OR \"VP Gr..." [ref=e385] [cursor=pointer]:
+                - /url: /talent/search?searchHistoryId=21076008321&start=0&uiOrigin=HISTORY_SEARCH
+                - generic [ref=e386]:
+                  - generic [ref=e387]:
+                    - heading "Search" [level=2] [ref=e388]
+                    - generic [ref=e391]: 8/27/2026
+                  - generic [ref=e392]: + ("Growth Director" OR "Head of Growth" OR "Director of Product Growth" OR "VP Gr...
+        - region
+      - heading "0 notifications total" [level=2] [ref=e397]
+      - contentinfo [ref=e398]:
+        - paragraph [ref=e399]:
+          - text: By using this site, you agree to LinkedIn
+          - link "terms of use" [ref=e400] [cursor=pointer]:
+            - /url: /static?key=user_agreement
+          - text: . Commercial use of this site without express authorization is prohibited.
+        - list [ref=e401]:
+          - listitem [ref=e402]: LinkedIn Corporation © 2026
+          - listitem [ref=e403]:
+            - link "User Agreement" [ref=e404] [cursor=pointer]:
+              - /url: /static?key=user_agreement
+          - listitem [ref=e405]:
+            - link "Privacy Policy" [ref=e406] [cursor=pointer]:
+              - /url: /static?key=privacy_policy
+          - listitem [ref=e407]:
+            - link "Copyright Policy" [ref=e408] [cursor=pointer]:
+              - /url: /static?key=copyright_policy
+          - listitem [ref=e409]:
+            - link "Cookie Preferences" [ref=e410] [cursor=pointer]:
+              - /url: https://www.linkedin.com/mypreferences/d/member-cookies
+          - listitem [ref=e411]:
+            - link "Accessibility" [ref=e412] [cursor=pointer]:
+              - /url: https://www.linkedin.com/accessibility
+          - listitem [ref=e413]:
+            - link "Support" [ref=e414] [cursor=pointer]:
+              - /url: /help/recruiter
+          - listitem [ref=e415]:
+            - link "Training" [ref=e416] [cursor=pointer]:
+              - /url: https://training.talent.linkedin.com/
+          - listitem [ref=e417]:
+            - link "Blog" [ref=e418] [cursor=pointer]:
+              - /url: /business/talent/blog?pin=tr64
+          - listitem [ref=e419]:
+            - button "Choose a Language" [ref=e422] [cursor=pointer]: Language
+    - generic:
+      - dialog "Start a candidate call BETA"

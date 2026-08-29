@@ -1,6 +1,11 @@
 {
+  "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Groupon_logo.svg",
+  "fonts": {
+    "--font-heading": "Montserrat",
+    "--font-body": "Open Sans"
+  },
   "colors": {
-    "primary": "#53A318",
-    "secondary": "#333333"
+    "primary": "#00824D",
+    "secondary": "#111111"
   }
 }
