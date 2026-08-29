@@ -511,13 +511,12 @@
                     document.documentElement.style.setProperty('--font-body', `"${bodyFont}", sans-serif`);
                 }
 
-                // Inject Logo
-                if (brand.logo_url) {
-                    const logoContainer = document.querySelector('.brand-logo');
-                    if (logoContainer) {
-                        logoContainer.innerHTML = `<img src="${brand.logo_url}" alt="${config?.client_name || 'Brand'} Logo" style="max-height: 35px; margin-bottom: 5px;">
-                                                   <span id="brand-tagline" style="display:block; font-size:0.85rem; color:var(--text-muted);">${config?.client_tagline || ''}</span>`;
-                    }
+                // Inject Logo (Text Fallback)
+                const logoContainer = document.querySelector('.brand-logo');
+                if (logoContainer && typeof config !== 'undefined' && config) {
+                    logoContainer.innerHTML = `
+                        <h1 id="brand-name" style="font-family: var(--font-heading); color: var(--brand-teal); margin: 0; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px;">${config.client_name}</h1>
+                        <span id="brand-tagline" style="display:block; font-size:0.85rem; color:var(--text-muted); margin-top: 2px;">${config.client_tagline}</span>`;
                 }
             }
 
