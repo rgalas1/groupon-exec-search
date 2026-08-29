@@ -1,129 +1,193 @@
 {
   "comp_findings": [
     {
-      "company": "Tripadvisor",
-      "title": "Senior Director of Machine Learning (Experiences)",
-      "level": "Senior Director",
-      "function": "Commercial Strategy & Machine Learning / Product",
-      "location": "Needham, MA / New York, NY",
-      "region": "US",
-      "minComp": 220000,
-      "maxComp": 285000,
-      "url": "https://boards.greenhouse.io/tripadvisor",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Tripadvisor",
-      "title": "Associate Director, AMER Account Management & Planning",
-      "level": "Associate Director",
-      "function": "Commercial / Sales Planning",
-      "location": "New York, NY",
-      "region": "US",
-      "minComp": 175000,
-      "maxComp": 200000,
-      "url": "https://boards.greenhouse.io/tripadvisor",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Toast",
-      "title": "Vice President, Enterprise Sales",
+      "company": "Secret Escapes",
+      "title": "Commercial Director",
       "level": "VP",
-      "function": "Enterprise Sales / Commercial GTM",
-      "location": "Remote",
-      "region": "US",
-      "minComp": 198000,
-      "maxComp": 403000,
-      "url": "https://boards.greenhouse.io/toast",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Toast",
-      "title": "Regional Vice President (RVP), Sales",
-      "level": "VP",
-      "function": "Field Sales Leadership / Commercial GTM",
-      "location": "Remote",
-      "region": "US",
-      "minComp": 219000,
-      "maxComp": 403000,
-      "url": "https://boards.greenhouse.io/toast",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Fever",
-      "title": "Director, Commercial Product (Brand Partnerships)",
-      "level": "Director",
-      "function": "Commercial Product Monetization & AdTech",
-      "location": "Madrid, Spain / London, UK",
+      "function": "Commercial",
+      "location": "London, UK",
       "region": "EMEA",
-      "minComp": 110000,
-      "maxComp": 160000,
-      "url": "https://careers.feverup.com/",
-      "source_tier": "TIER_1_ATS"
+      "minComp": 94000,
+      "maxComp": 144000,
+      "url": "https://www.indeed.co.uk/cmp/Secret-Escapes/salaries",
+      "source_tier": "TIER_2_BENCHMARK"
     },
     {
-      "company": "Fever",
-      "title": "Associate Director, Creative Strategy (Brand Partnerships)",
-      "level": "Associate Director",
-      "function": "Commercial Ad Strategy",
-      "location": "New York, NY",
-      "region": "US",
-      "minComp": 120000,
-      "maxComp": 140000,
-      "url": "https://careers.feverup.com/",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Square (Block)",
-      "title": "Head of Square Commercial Operations & Deal Excellence",
-      "level": "Head / Sr. Director",
-      "function": "Commercial Operations",
-      "location": "San Francisco, CA / US Remote",
-      "region": "US",
-      "minComp": 217800,
-      "maxComp": 326800,
-      "url": "https://boards.greenhouse.io/block",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Square (Block)",
-      "title": "Director of Field Sales (Northeast / NYC)",
-      "level": "Director",
-      "function": "Commercial Field Sales",
-      "location": "New York, NY",
-      "region": "US",
-      "minComp": 180000,
-      "maxComp": 297000,
-      "url": "https://boards.greenhouse.io/block",
-      "source_tier": "TIER_1_ATS"
-    },
-    {
-      "company": "Ravio Benchmark",
-      "title": "VP Sales",
+      "company": "Booking.com",
+      "title": "Director of Commercial Operations",
       "level": "VP",
-      "function": "Sales",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 120000,
+      "maxComp": 175000,
+      "url": "https://www.glassdoor.co.uk/Salary/Booking-com-Salaries-E17637.htm",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Yelp",
+      "title": "VP of Sales",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 125000,
+      "maxComp": 230000,
+      "url": "https://www.comparably.com/companies/yelp/salaries/vp-of-sales",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Trustpilot",
+      "title": "VP Commercial / VP Sales",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 120000,
+      "maxComp": 200000,
+      "url": "https://corporate.trustpilot.com/investors",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Deliveroo",
+      "title": "Commercial Director / VP Commercial",
+      "level": "VP",
+      "function": "Commercial",
       "location": "London, UK",
       "region": "EMEA",
       "minComp": 100000,
+      "maxComp": 170000,
+      "url": "https://corporate.deliveroo.co.uk/investors",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Just Eat",
+      "title": "Commercial Director / VP Commercial",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 90000,
+      "maxComp": 170000,
+      "url": "https://find-and-update.company-information.service.gov.uk/company/04656315",
+      "source_tier": "TIER_3_STATUTORY"
+    },
+    {
+      "company": "Wowcher",
+      "title": "Head of Commercial Partnerships",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 43200,
+      "maxComp": 72000,
+      "url": "https://www.studysmarter.co.uk/job-postings/wowcher-head-of-commercial-partnerships",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Wowcher",
+      "title": "Commercial Director",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 90000,
       "maxComp": 150000,
-      "url": "https://ravio.com",
-      "source_tier": "TIER_2_VENDOR"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/04264984",
+      "source_tier": "TIER_3_STATUTORY"
+    },
+    {
+      "company": "Travelzoo",
+      "title": "Head of Sales, Travel (UK & EMEA)",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 60000,
+      "maxComp": 80000,
+      "url": "https://find-and-update.company-information.service.gov.uk/company/05442657",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "LivingSocial",
+      "title": "VP of Sales / Commercial Director",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 110000,
+      "maxComp": 160000,
+      "url": "https://www.execcapital.co.uk/commercial-director-salary-guide",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Criteo",
+      "title": "Chief Revenue Officer & President, Retail Media",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "Paris / London / Global",
+      "region": "EMEA",
+      "minComp": 550137,
+      "maxComp": 575000,
+      "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
+      "source_tier": "TIER_3_STATUTORY"
+    },
+    {
+      "company": "Criteo",
+      "title": "Sales Director, Performance Media EMEA",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 80000,
+      "maxComp": 150000,
+      "url": "https://www.criteo.com/careers/",
+      "source_tier": "TIER_1_ATS"
+    },
+    {
+      "company": "Farfetch",
+      "title": "Director of Commercial Brand Partnerships",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 90000,
+      "maxComp": 140000,
+      "url": "https://www.glassdoor.co.uk/Salary/Farfetch-Salaries-E673059.htm",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Klook",
+      "title": "Director of Business Development & Commercial Lead EMEA",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 80000,
+      "maxComp": 120000,
+      "url": "https://www.klook.com/careers/",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Ravio / Pave",
+      "title": "VP Sales / VP Commercial",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "London, UK",
+      "region": "EMEA",
+      "minComp": 120000,
+      "maxComp": 160000,
+      "url": "https://www.ravio.com/reports/european-executive-salary-survey",
+      "source_tier": "TIER_2_BENCHMARK"
     }
   ],
   "research_ledger": {
     "queries_executed": [
-      "Groupon competitors",
-      "site:boards.greenhouse.io OR site:jobs.lever.co OR site:jobs.ashbyhq.com \"Travelzoo\" OR \"Wowcher\" OR \"Fever\" OR \"Yelp\" OR \"Tripadvisor\" OR \"Rakuten\" OR \"Square\" OR \"Toast\" OR \"Shopify\"",
-      "\"Travelzoo careers\" OR \"Wowcher careers\" OR \"Fever careers\" ATS lever greenhouse workable",
-      "site:ravio.com \"VP Commercial\" OR \"VP Sales\" salary benchmark Europe OR UK",
-      "\"Groupon\" OR \"Yelp\" layoff OR restructuring OR \"acquired\" 2023 2024"
+      "Wowcher", "Travelzoo", "LivingSocial", 
+      "Trustpilot", "Deliveroo", "Just Eat", 
+      "Yelp", "Booking.com", "Secret Escapes", 
+      "Klook", "Criteo", "Farfetch"
     ],
-    "urls_visited": [
-      "https://boards-api.greenhouse.io/v1/boards/tripadvisor/jobs?content=true",
-      "https://boards-api.greenhouse.io/v1/boards/toast/jobs?content=true",
-      "https://boards-api.greenhouse.io/v1/boards/fever/jobs?content=true",
-      "https://boards-api.greenhouse.io/v1/boards/block/jobs?content=true"
-    ],
-    "stop_condition_triggered": "STOP-1",
-    "blocked_urls": []
+    "stop_condition_triggered": "STOP-1"
   }
 }
