@@ -1,133 +1,53 @@
 {
   "performance_profile": [
-    "Outcome 1: Redesign the primary revenue growth motion around AI-driven sales and automated merchant onboarding within the first 6 months.",
-    "Outcome 2: Evaluate, restructure, and upskill the 20-person commercial team (sales, AM, ops) to execute the new tech-led GTM strategy.",
-    "Outcome 3: Demonstrate Adoptive AI fluency by deploying AI tools/workflows that measurably reduce merchant onboarding time and increase sales efficiency in Year 1.",
-    "Outcome 4: Establish tight cross-functional alignment with the CPO to ensure commercial insights directly inform product and AI feature roadmaps.",
-    "Outcome 5: Hit revised quarterly revenue and merchant acquisition targets under the new motion in Q3 and Q4."
+    "Overhaul the core revenue motion so it runs on AI-driven sales and merchant onboarding, not just human hustle.",
+    "Take a 20-person team across sales, AM, and ops and transform them from traditional sellers into an AI-fluent commercial engine.",
+    "Dramatically strip friction out of merchant onboarding using technology, slashing time-to-revenue.",
+    "Lock arms with the CPO to ensure the commercial strategy actually monetizes the new product roadmap."
   ],
   "triangulation_matrix": {
-    "Tech-Led Commercial Transformation": [
-      "Stage 2 (Hiring Manager)",
-      "Stage 4 (Take-Home Task)"
+    "AI-Driven Commercial Transformation": [
+      "Stage 1",
+      "Stage 2"
     ],
-    "AI Fluency & Application": [
-      "Stage 3 (Functional/Peer)",
-      "Stage 4 (Take-Home Task)"
+    "Team Turnaround & Change Management": [
+      "Stage 2",
+      "Stage 3"
     ],
-    "Change Leadership & Restructuring": [
-      "Stage 2 (Hiring Manager)",
-      "Stage 5 (Executive Alignment)"
+    "Product-Commercial Alignment": [
+      "Stage 1",
+      "Stage 3"
     ]
   },
   "stages": [
     {
       "stage_number": 1,
-      "stage_name": "Screening &amp; Alignment",
-      "interviewer_persona": "Talent Acquisition Partner",
+      "stage_name": "Executive Screening",
+      "interviewer_persona": "Talent Partner",
       "duration_minutes": 45,
-      "competencies_covered": [
-        "Motivation",
-        "Compensation Alignment",
-        "Location Viability"
-      ],
-      "questions": [
-        {
-          "question_text": "What specifically interests you about driving a commercial AI transformation at this stage of your career? Also, can you confirm your compensation expectations and willingness to be based in London or Prague?",
-          "probe_tree": [
-            "Are you comfortable with the EMEA comp banding which may differ from US tech norms?",
-            "What is your understanding of Adoptive AI in a sales context?"
-          ],
-          "look_for": "Alignment with EMEA compensation realities, genuine interest in AI-led transformation, no friction on location.",
-          "red_flags": "Misaligned compensation expectations (expecting US Toast/Block $200k+ levels), boilerplate answers about AI."
-        }
+      "focus_areas": [
+        "Are they genuinely operating at Adoptive AI fluency, or just using buzzwords?",
+        "Have they actually led a tech-first commercial transformation from the front?"
       ]
     },
     {
       "stage_number": 2,
-      "stage_name": "Topgrading Chronological Deep Dive",
-      "interviewer_persona": "Chief Product Officer (Hiring Manager)",
+      "stage_name": "Chronological Topgrade",
+      "interviewer_persona": "External Search Partner",
       "duration_minutes": 90,
-      "competencies_covered": [
-        "Tech-Led Commercial Transformation",
-        "Change Leadership &amp; Restructuring"
-      ],
-      "questions": [
-        {
-          "question_text": "Walk me through your most recent role where you led a commercial function through a technology transformation. If I were to call your CEO from that time, how would they rate your execution on a scale of 1-10?",
-          "probe_tree": [
-            "What was the exact revenue impact?",
-            "How did you handle the restructuring of your legacy sales team?",
-            "What specific technology or AI did you implement and why?"
-          ],
-          "look_for": "Data-backed evidence of revenue impact, ownership of team restructuring, comfort with the Threat of Reference Check (TORC).",
-          "red_flags": "Uses &#x27;we&#x27; instead of &#x27;I&#x27; for critical decisions, inability to provide concrete metrics, defensiveness around reference checks."
-        }
+      "focus_areas": [
+        "Walking through every role: what did they inherit, what did they build, and who did they hire/fire?",
+        "Digging into their specific playbook for managing a team of 20 through a massive strategic pivot."
       ]
     },
     {
       "stage_number": 3,
-      "stage_name": "Functional / Peer Triangulation",
-      "interviewer_persona": "VP Engineering or VP Product",
+      "stage_name": "Product & Strategy Lock",
+      "interviewer_persona": "Chief Product Officer",
       "duration_minutes": 60,
-      "competencies_covered": [
-        "AI Fluency &amp; Application",
-        "Cross-functional Product Alignment"
-      ],
-      "questions": [
-        {
-          "question_text": "Tell me about a time you implemented an AI-driven tool or automated workflow into a sales or merchant onboarding process. How did it technically integrate and change day-to-day operations?",
-          "probe_tree": [
-            "What tools were evaluated?",
-            "How did you partner with Product/Engineering to execute this?",
-            "How did you measure the efficiency gains?"
-          ],
-          "look_for": "Nuanced understanding of &#x27;Adoptive AI fluency&#x27;, specific examples of tools used, evidence of strong cross-functional collaboration with technical teams.",
-          "red_flags": "Superficial understanding of AI, viewing AI as a buzzword rather than a practical workflow driver, friction with Product/Eng teams."
-        }
-      ]
-    },
-    {
-      "stage_number": 4,
-      "stage_name": "Take-Home Task &amp; Panel Presentation",
-      "interviewer_persona": "Panel: CPO, Key Peers",
-      "duration_minutes": 60,
-      "competencies_covered": [
-        "Tech-Led Commercial Transformation",
-        "AI Fluency &amp; Application"
-      ],
-      "questions": [
-        {
-          "question_text": "Candidate presents a 30-minute plan (prepared in &lt; 4 hours) on how they would redesign our merchant onboarding and sales motion utilizing AI within their first 100 days. Followed by 30 minutes of Q&amp;A.",
-          "probe_tree": [
-            "What assumptions did you make about our current tech stack?",
-            "How would you structure the team of 20 to execute this plan?",
-            "Where do you foresee the biggest friction points in merchant adoption?"
-          ],
-          "look_for": "Actionable, pragmatic strategy; clear understanding of AI application in merchant onboarding; logical team structuring; ability to defend ideas under pressure.",
-          "red_flags": "Overly theoretical or academic presentation, failure to allocate headcount effectively, inability to link the strategy to revenue outcomes."
-        }
-      ]
-    },
-    {
-      "stage_number": 5,
-      "stage_name": "Final Executive Alignment",
-      "interviewer_persona": "CEO or Board Member",
-      "duration_minutes": 45,
-      "competencies_covered": [
-        "Change Leadership &amp; Restructuring",
-        "Culture Add"
-      ],
-      "questions": [
-        {
-          "question_text": "When transforming a commercial team and introducing significant automation, there is always resistance. What is your philosophy on managing this change while hitting aggressive revenue targets?",
-          "probe_tree": [
-            "Can you share an example of when a transformation faced massive pushback? How did you pivot?",
-            "How do you ensure company culture isn&#x27;t broken during aggressive change?"
-          ],
-          "look_for": "High EQ, resilience, pragmatic approach to change management, alignment with company values, executive presence.",
-          "red_flags": "Arrogance, lack of empathy for team disruption, inability to articulate a clear philosophy on leadership during transformation."
-        }
+      "focus_areas": [
+        "Can they spar with product leadership on how to monetize AI features?",
+        "Do they understand merchant friction well enough to influence the roadmap?"
       ]
     }
   ]

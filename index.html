@@ -569,27 +569,15 @@
                 populateVPSection();
             }
 
-            // Load Assessment Architecture
-            const assessmentData = await loadJSON('assessment_architecture.json');
-            if (assessmentData && assessmentData.stages) {
-                document.getElementById('interview-process-container').innerHTML = assessmentData.stages.map(stage => {
-                    const hasQuestions = stage.questions && stage.questions.length > 0;
-                    return `
-                    <div style="border-bottom: 1px solid var(--gray-light, #e5e7eb); padding-bottom: 24px; margin-bottom: 24px;">
-                        <h3 style="color: var(--brand-teal); font-size: 1.25rem; font-weight: 600; margin-bottom: 12px;">Stage ${stage.stage_number}: ${stage.stage_name}</h3>
-                        <p style="margin-bottom: 8px;"><strong>Interviewer:</strong> ${stage.interviewer_persona} (${stage.duration_minutes} mins)</p>
-                        <p style="margin-bottom: 16px;"><strong>Competencies Covered:</strong> ${(stage.competencies_covered || []).join(', ')}</p>
-                        ${hasQuestions ? `
-                        <div style="background: var(--gray-light, #f9fafb); padding: 16px; border-radius: 6px;">
-                            <p style="font-weight: 500; margin-bottom: 8px;">Core Question:</p>
-                            <p style="margin-bottom: 12px; font-style: italic;">"${stage.questions[0].question_text}"</p>
-                            <p style="font-size: 0.9rem; margin-bottom: 4px;"><strong>Look For:</strong> ${stage.questions[0].look_for}</p>
-                            <p style="font-size: 0.9rem; color: #dc2626;"><strong>Red Flags:</strong> ${stage.questions[0].red_flags}</p>
-                        </div>
-                        ` : ''}
-                    </div>
-                    `;
-                }).join('');
+            // Load Assessment Architecture Snippet
+            try {
+                const htmlResponse = await fetch('data/assessment_ui_snippet.html');
+                if (htmlResponse.ok) {
+                    const snippet = await htmlResponse.text();
+                    document.getElementById('interview-process-container').innerHTML = snippet;
+                }
+            } catch (e) {
+                console.error("Failed to load assessment UI snippet", e);
             }
 
             // Load Pipeline CSV
