@@ -1,212 +1,219 @@
 <style>
   .assessment-container {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
     color: var(--brand-dark);
-    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #fafafa;
   }
-  
-  .editorial-header {
-    margin-bottom: 40px;
-  }
   .eyebrow {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--brand-teal);
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
-  .title {
-    font-size: 2.2rem;
-    font-weight: 300;
-    margin: 0;
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 30px;
     color: var(--brand-dark);
-    letter-spacing: -0.02em;
   }
-  
-  /* Timeline Section */
   .timeline {
     position: relative;
-    margin-bottom: 80px;
-    padding-left: 20px;
-    border-left: 2px solid var(--gray-light);
+    padding-left: 30px;
+    margin-bottom: 50px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--gray-light);
   }
   .timeline-card {
     position: relative;
-    background: #fff;
-    border: 1px solid var(--gray-light);
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    margin-left: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--gray-light);
   }
   .timeline-card::before {
     content: '';
     position: absolute;
-    left: -27px; /* relative to card */
-    top: 32px;
+    left: -28px;
+    top: 25px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: var(--brand-teal);
-    border: 3px solid #fff;
+    border: 3px solid white;
     box-shadow: 0 0 0 1px var(--gray-light);
   }
-  .stage-number {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 4px;
-  }
-  .stage-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 8px 0;
-  }
-  .stage-meta {
+  .timeline-stage {
     font-size: 0.85rem;
-    color: var(--brand-teal);
-    margin-bottom: 16px;
-    font-weight: 500;
-  }
-  .focus-areas {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .focus-areas li {
-    font-size: 0.95rem;
+    font-weight: 600;
     color: var(--text-muted);
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 16px;
+    margin-bottom: 5px;
   }
-  .focus-areas li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--brand-teal);
+  .timeline-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
   }
-  
-  /* Pillar Cards Section */
+  .timeline-interviewer {
+    font-size: 0.9rem;
+    color: var(--brand-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .timeline-focus {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
   .mandate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
   }
   .pillar-card {
     position: relative;
-    background: #fff;
-    border: 1px solid var(--gray-light);
+    background: white;
+    padding: 30px 20px;
     border-radius: 8px;
-    padding: 32px 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--gray-light);
     overflow: hidden;
+    min-height: 120px;
     display: flex;
     align-items: center;
   }
-  .pillar-bg-number {
-    position: absolute;
-    top: -20px;
-    right: -10px;
-    font-size: 10rem;
-    font-weight: 900;
-    color: var(--brand-dark);
-    opacity: 0.05;
-    line-height: 1;
-    user-select: none;
-    z-index: 1;
-  }
-  .pillar-content {
+  .pillar-card-content {
     position: relative;
     z-index: 2;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--brand-dark);
   }
+  .pillar-watermark {
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--brand-dark);
+    opacity: 0.05;
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+  }
 </style>
 
 <div class="assessment-container">
-  
-  <div class="editorial-header">
-    <div class="eyebrow">The Architecture</div>
-    <h2 class="title">ASSESSMENT TIMELINE</h2>
-  </div>
+  <!-- Timeline Section -->
+  <div class="eyebrow">THE ARCHITECTURE</div>
+  <h2 class="section-title">ASSESSMENT TIMELINE</h2>
   
   <div class="timeline">
-    
     <div class="timeline-card">
-      <div class="stage-number">Stage 01</div>
-      <h3 class="stage-name">Executive Screening</h3>
-      <div class="stage-meta">Talent Partner &bull; 45 Minutes</div>
-      <ul class="focus-areas">
-        <li>Are they genuinely operating at Adoptive AI fluency, or just using buzzwords?</li>
-        <li>Have they actually led a tech-first commercial transformation from the front?</li>
-      </ul>
+      <div class="timeline-stage">STAGE 1 • 45 MIN</div>
+      <h3 class="timeline-title">Executive Screening</h3>
+      <div class="timeline-interviewer">Interviewer: Talent Partner</div>
+      <div class="timeline-focus">
+        <ul>
+          <li>How they articulate their experience with AI-driven technology transformations.</li>
+          <li>Their approach to leading teams through significant operational shifts.</li>
+        </ul>
+      </div>
     </div>
     
     <div class="timeline-card">
-      <div class="stage-number">Stage 02</div>
-      <h3 class="stage-name">Chronological Topgrade</h3>
-      <div class="stage-meta">External Search Partner &bull; 90 Minutes</div>
-      <ul class="focus-areas">
-        <li>Walking through every role: what did they inherit, what did they build, and who did they hire/fire?</li>
-        <li>Digging into their specific playbook for managing a team of 20 through a massive strategic pivot.</li>
-      </ul>
+      <div class="timeline-stage">STAGE 2 • 60 MIN</div>
+      <h3 class="timeline-title">Hiring Manager Alignment</h3>
+      <div class="timeline-interviewer">Interviewer: Chief Product Officer</div>
+      <div class="timeline-focus">
+        <ul>
+          <li>Can they genuinely collaborate with Product to redesign the revenue motion?</li>
+          <li>Do they possess the true 'Adoptive AI fluency' required to lead this charge?</li>
+        </ul>
+      </div>
     </div>
     
     <div class="timeline-card">
-      <div class="stage-number">Stage 03</div>
-      <h3 class="stage-name">Product & Strategy Lock</h3>
-      <div class="stage-meta">Chief Product Officer &bull; 60 Minutes</div>
-      <ul class="focus-areas">
-        <li>Can they spar with product leadership on how to monetize AI features?</li>
-        <li>Do they understand merchant friction well enough to influence the roadmap?</li>
-      </ul>
+      <div class="timeline-stage">STAGE 3 • 90 MIN</div>
+      <h3 class="timeline-title">Chronological Topgrading Deep Dive</h3>
+      <div class="timeline-interviewer">Interviewer: Executive Panel (COO / HR Leader)</div>
+      <div class="timeline-focus">
+        <ul>
+          <li>Walking through their career history to validate their track record of scaling teams.</li>
+          <li>How they have historically handled resistance when rolling out tech-led changes.</li>
+        </ul>
+      </div>
     </div>
     
+    <div class="timeline-card">
+      <div class="timeline-stage">STAGE 4 • 60 MIN</div>
+      <h3 class="timeline-title">Case Study & Strategic Task</h3>
+      <div class="timeline-interviewer">Interviewer: CPO & Key Stakeholders</div>
+      <div class="timeline-focus">
+        <ul>
+          <li>Their ability to build a realistic, actionable plan for merchant onboarding using AI.</li>
+          <li>How they defend their strategic decisions under executive scrutiny.</li>
+        </ul>
+        <details style="margin-top:15px;">
+          <summary style="cursor:pointer; font-weight:600; color:var(--brand-teal);">View Case Study Options</summary>
+          <div style="padding:15px 0 5px 15px; border-left: 2px solid var(--brand-teal); margin-top:10px;">
+            <p><strong>Option A: 90-Day AI Onboarding Rollout</strong><br/>
+            Outline an aggressive 90-day plan to integrate AI tools into the existing merchant onboarding process, including team restructuring and KPI adjustments.</p>
+            <p style="margin-top:15px;"><strong>Option B: Revamping the Sales Motion</strong><br/>
+            Design a new AI-driven sales motion for a legacy market, detailing how you would retrain the current account management team to adopt the new workflow.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+    
+    <div class="timeline-card">
+      <div class="timeline-stage">STAGE 5 • 45 MIN</div>
+      <h3 class="timeline-title">Final Executive Culture Fit</h3>
+      <div class="timeline-interviewer">Interviewer: CEO / Select C-Suite</div>
+      <div class="timeline-focus">
+        <ul>
+          <li>How they align with Groupon's broader corporate vision and culture.</li>
+          <li>Their resilience and adaptability in high-pressure executive environments.</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  
-  <div class="editorial-header">
-    <div class="eyebrow">The Mandate</div>
-    <h2 class="title">PERFORMANCE PROFILE</h2>
-  </div>
+
+  <!-- Mandate Grid Section -->
+  <div class="eyebrow">THE MANDATE</div>
+  <h2 class="section-title">PERFORMANCE PROFILE</h2>
   
   <div class="mandate-grid">
-    
     <div class="pillar-card">
-      <div class="pillar-bg-number">01</div>
-      <div class="pillar-content">
-        Overhaul the core revenue motion so it runs on AI-driven sales and merchant onboarding, not just human hustle.
-      </div>
+      <div class="pillar-watermark">01</div>
+      <div class="pillar-card-content">Successfully transition the revenue growth motion to an AI-driven sales and merchant onboarding model within the first 6 months.</div>
     </div>
-    
     <div class="pillar-card">
-      <div class="pillar-bg-number">02</div>
-      <div class="pillar-content">
-        Take a 20-person team across sales, AM, and ops and transform them from traditional sellers into an AI-fluent commercial engine.
-      </div>
+      <div class="pillar-watermark">02</div>
+      <div class="pillar-card-content">Scale and upskill a 20-person commercial team to operate at Adoptive AI fluency.</div>
     </div>
-    
     <div class="pillar-card">
-      <div class="pillar-bg-number">03</div>
-      <div class="pillar-content">
-        Dramatically strip friction out of merchant onboarding using technology, slashing time-to-revenue.
-      </div>
+      <div class="pillar-watermark">03</div>
+      <div class="pillar-card-content">Deliver a minimum of 25% increase in merchant onboarding efficiency using automated AI solutions.</div>
     </div>
-    
     <div class="pillar-card">
-      <div class="pillar-bg-number">04</div>
-      <div class="pillar-content">
-        Lock arms with the CPO to ensure the commercial strategy actually monetizes the new product roadmap.
-      </div>
+      <div class="pillar-watermark">04</div>
+      <div class="pillar-card-content">Establish cross-functional alignment with Product to ensure the commercial strategy matches the technology-led transformation.</div>
     </div>
-    
   </div>
-  
 </div>
