@@ -46,7 +46,7 @@
 
         body {
             font-family: var(--font-body);
-            background-color: var(--brand-mint);
+            background-color: var(--off-white);
             color: var(--brand-dark);
             line-height: 1.6;
         }
@@ -102,17 +102,17 @@
             border: none;
             color: var(--brand-dark);
             font-family: var(--font-intel);
-            font-weight: 300;
-            font-size: 1rem;
-            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            font-size: 0.95rem;
             cursor: pointer;
+            padding: 0.5rem 0;
             transition: all 0.2s ease;
             position: relative;
             text-transform: none;
         }
         
         .nav-btn.active {
-            font-weight: 400;
+            font-weight: 700;
         }
         
         .nav-btn.active::after {
@@ -154,8 +154,8 @@
 
         .kanban-board { display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 2rem; align-items: flex-start; }
         .kanban-column { background: rgba(255, 255, 255, 0.5); min-width: 330px; width: 330px; border-radius: 4px; padding: 1rem; border: none; }
-        .kanban-header { font-family: var(--font-heading); font-size: 1rem; text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--brand-dark); display: flex; justify-content: space-between; align-items: center; }
-        .kanban-count { background: var(--brand-dark); color: var(--white); padding: 2px 10px; border-radius: 20px; font-size: 0.85rem; font-family: var(--font-intel); font-weight: bold; }
+        .kanban-header { font-family: var(--font-heading); font-size: 1rem; text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .kanban-count { background: #e5e7eb; color: var(--brand-dark); padding: 2px 10px; border-radius: 20px; font-size: 0.85rem; font-family: var(--font-intel); font-weight: bold; }
         
         .candidate-card { background: var(--white); border-radius: 4px; padding: 1.25rem; margin-bottom: 1rem; border: none; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; }
         .candidate-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(22,23,15,0.08), 0 4px 8px rgba(22,23,15,0.04); }
@@ -515,7 +515,7 @@
                 const logoContainer = document.querySelector('.brand-logo');
                 if (logoContainer && typeof config !== 'undefined' && config) {
                     logoContainer.innerHTML = `
-                        <h1 id="brand-name" style="font-family: var(--font-heading); color: var(--brand-teal); margin: 0; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px;">${config.client_name}</h1>
+                        <h1 id="brand-name" style="font-family: var(--font-heading); color: var(--brand-teal); margin: 0; font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; text-transform: uppercase;">${config.client_name}</h1>
                         <span id="brand-tagline" style="display:block; font-size:0.85rem; color:var(--text-muted); margin-top: 2px;">${config.client_tagline}</span>`;
                 }
             }
@@ -571,7 +571,8 @@
 
             // Load Assessment Architecture Snippet
             try {
-                const htmlResponse = await fetch('data/assessment_ui_snippet.html');
+                const cacheBusterHtml = 'data/assessment_ui_snippet.html?t=' + new Date().getTime();
+                const htmlResponse = await fetch(cacheBusterHtml);
                 if (htmlResponse.ok) {
                     const snippet = await htmlResponse.text();
                     document.getElementById('interview-process-container').innerHTML = snippet;
