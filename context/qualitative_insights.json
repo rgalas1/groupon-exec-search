@@ -3,7 +3,7 @@
     {
       "signal_type": "acquisition",
       "company": "Deliveroo",
-      "summary": "Acquired by DoorDash for £2.9B in 2025, exiting multiple Asian markets.",
+      "summary": "Acquired by DoorDash for \u00a32.9B in 2025, exiting multiple Asian markets.",
       "source_url": "https://www.mindtheproduct.com/",
       "relevance": "Potential for leadership restructuring and talent exodus; creates talent pool for our search."
     },
@@ -13,6 +13,13 @@
       "summary": "Layoffs affecting over 2,000 employees historically and 450 in Sept 2025 due to automation.",
       "source_url": "https://www.indiatimes.com/",
       "relevance": "Experienced commercial leaders may be looking for new stable opportunities."
+    },
+    {
+      "signal_type": "expansion",
+      "company": "Rohlik Group",
+      "summary": "Rapid expansion across DACH and CEE regions, heavily relying on AI/automation for warehouse and delivery logistics.",
+      "source_url": "https://techcrunch.com/",
+      "relevance": "Strong talent pool of operational leaders in Prague who understand high-velocity, low-margin automated marketplaces."
     }
   ],
   "title_taxonomy": [
@@ -26,21 +33,25 @@
     "tier_1": [
       "Wowcher",
       "LivingSocial",
-      "Travelzoo"
+      "Travelzoo",
+      "Rohlik Group"
     ],
     "tier_2": [
       "Trustpilot",
       "Just Eat",
       "Deliveroo",
       "Yelp",
-      "Booking.com"
+      "Booking.com",
+      "Mews",
+      "Productboard"
     ],
     "tier_3": [
       "Secret Escapes",
       "Treatwell",
       "Fever",
       "GetYourGuide",
-      "Klook"
+      "Klook",
+      "Kiwi.com"
     ]
   }
 }

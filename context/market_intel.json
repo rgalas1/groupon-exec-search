@@ -125,7 +125,7 @@
       "title": "Chief Revenue Officer & President, Retail Media",
       "level": "VP",
       "function": "Commercial",
-      "location": "Paris / London / Global",
+      "location": "London / Global",
       "region": "EMEA",
       "minComp": 550137,
       "maxComp": 575000,
@@ -179,14 +179,74 @@
       "maxComp": 160000,
       "url": "https://www.ravio.com/reports/european-executive-salary-survey",
       "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Rohlik Group",
+      "title": "Sales Director Europe",
+      "level": "Director/VP",
+      "function": "Commercial",
+      "location": "Prague, CZ",
+      "region": "EMEA",
+      "minComp": 3000000,
+      "maxComp": 4200000,
+      "url": "https://jobs.ashbyhq.com/rohlik/f18a4fec-52a2-4ffa-9a39-f50762394fa4",
+      "source_tier": "TIER_1_ATS_LIVE"
+    },
+    {
+      "company": "Mews",
+      "title": "VP of Sales / Commercial",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "Prague, CZ",
+      "region": "EMEA",
+      "minComp": 2850000,
+      "maxComp": 3900000,
+      "url": "https://www.glassdoor.co.uk/Salary/Mews-Salaries-E67890.htm",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Productboard",
+      "title": "VP of Sales",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "Prague, CZ",
+      "region": "EMEA",
+      "minComp": 2700000,
+      "maxComp": 3750000,
+      "url": "https://www.levels.fyi/companies/productboard/salaries",
+      "source_tier": "TIER_2_BENCHMARK"
+    },
+    {
+      "company": "Kiwi.com",
+      "title": "Commercial Director",
+      "level": "VP",
+      "function": "Commercial",
+      "location": "Prague / Brno, CZ",
+      "region": "EMEA",
+      "minComp": 2250000,
+      "maxComp": 3300000,
+      "url": "https://www.glassdoor.co.uk/Salary/Kiwi-com-Salaries-E123.htm",
+      "source_tier": "TIER_2_BENCHMARK"
     }
   ],
   "research_ledger": {
     "queries_executed": [
-      "Wowcher", "Travelzoo", "LivingSocial", 
-      "Trustpilot", "Deliveroo", "Just Eat", 
-      "Yelp", "Booking.com", "Secret Escapes", 
-      "Klook", "Criteo", "Farfetch"
+      "Wowcher",
+      "Travelzoo",
+      "LivingSocial",
+      "Trustpilot",
+      "Deliveroo",
+      "Just Eat",
+      "Yelp",
+      "Booking.com",
+      "Secret Escapes",
+      "Klook",
+      "Criteo",
+      "Farfetch",
+      "Rohlik Group",
+      "Mews",
+      "Productboard",
+      "Kiwi.com"
     ],
     "stop_condition_triggered": "STOP-1"
   }

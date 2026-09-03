@@ -1,365 +1,365 @@
 {
-  "run_version": 2,
+  "run_version": 9,
   "candidates": [
     {
-      "Candidate": "James Smith",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Just Eat",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Just Eat during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/james-smith-876/"
-    },
-    {
-      "Candidate": "Emma Jones",
-      "Background Profile": "VP Commercial",
-      "Current Company": "Just Eat",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Just Eat during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/emma-jones-107/"
-    },
-    {
-      "Candidate": "Oliver Taylor",
-      "Background Profile": "Head of Sales",
-      "Current Company": "LivingSocial",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at LivingSocial during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/oliver-taylor-434/"
-    },
-    {
-      "Candidate": "Charlotte Williams",
-      "Background Profile": "Head of Sales",
-      "Current Company": "LivingSocial",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at LivingSocial during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/charlotte-williams-329/"
-    },
-    {
-      "Candidate": "William Brown",
+      "Candidate": "Tom Bradley",
       "Background Profile": "Commercial Director",
-      "Current Company": "Criteo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Criteo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/william-brown-639/"
-    },
-    {
-      "Candidate": "Alice Davies",
-      "Background Profile": "Commercial Director",
-      "Current Company": "Just Eat",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Just Eat during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/alice-davies-472/"
-    },
-    {
-      "Candidate": "Thomas Evans",
-      "Background Profile": "Head of Sales",
-      "Current Company": "Ravio",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Ravio during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/thomas-evans-723/"
-    },
-    {
-      "Candidate": "Sophie Wilson",
-      "Background Profile": "VP of Sales",
-      "Current Company": "LivingSocial",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at LivingSocial during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/sophie-wilson-628/"
-    },
-    {
-      "Candidate": "George Thomas",
-      "Background Profile": "Head of Commercial Partnerships",
-      "Current Company": "Criteo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Criteo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/george-thomas-749/"
-    },
-    {
-      "Candidate": "Lucy Roberts",
-      "Background Profile": "Head of Sales",
-      "Current Company": "Booking.com",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/lucy-roberts-415/"
-    },
-    {
-      "Candidate": "Arthur Johnson",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Booking.com",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/arthur-johnson-673/"
-    },
-    {
-      "Candidate": "Grace Lewis",
-      "Background Profile": "Head of Sales",
-      "Current Company": "Travelzoo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Travelzoo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/grace-lewis-660/"
-    },
-    {
-      "Candidate": "Harry Walker",
-      "Background Profile": "Director of Commercial Operations",
-      "Current Company": "Yelp",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Yelp during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/harry-walker-985/"
-    },
-    {
-      "Candidate": "Emily Robinson",
-      "Background Profile": "Head of Commercial Partnerships",
-      "Current Company": "Trustpilot",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Trustpilot during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/emily-robinson-459/"
-    },
-    {
-      "Candidate": "Jack Wood",
-      "Background Profile": "VP Commercial",
-      "Current Company": "Ravio",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Ravio during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/jack-wood-673/"
-    },
-    {
-      "Candidate": "Mia Thompson",
-      "Background Profile": "Head of Sales",
-      "Current Company": "Secret Escapes",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Secret Escapes during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/mia-thompson-159/"
-    },
-    {
-      "Candidate": "Leo White",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Booking.com",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/leo-white-692/"
-    },
-    {
-      "Candidate": "Isabella Watson",
-      "Background Profile": "VP Commercial",
-      "Current Company": "Secret Escapes",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Secret Escapes during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/isabella-watson-817/"
-    },
-    {
-      "Candidate": "Charlie Jackson",
-      "Background Profile": "Head of Commercial Partnerships",
-      "Current Company": "Travelzoo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Travelzoo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/charlie-jackson-871/"
-    },
-    {
-      "Candidate": "Amelia Wright",
-      "Background Profile": "VP Sales",
-      "Current Company": "Criteo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Criteo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/amelia-wright-214/"
-    },
-    {
-      "Candidate": "Jacob Green",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Booking.com",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/jacob-green-521/"
-    },
-    {
-      "Candidate": "Lily Harris",
-      "Background Profile": "Commercial Director",
-      "Current Company": "Travelzoo",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Travelzoo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/lily-harris-641/"
-    },
-    {
-      "Candidate": "Freddie Cooper",
-      "Background Profile": "VP Commercial",
-      "Current Company": "Criteo",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Criteo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/freddie-cooper-873/"
-    },
-    {
-      "Candidate": "Evie King",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Trustpilot",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Trustpilot during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/evie-king-480/"
-    },
-    {
-      "Candidate": "Alfie Lee",
-      "Background Profile": "Head of Commercial Partnerships",
-      "Current Company": "Ravio",
-      "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Ravio during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/alfie-lee-777/"
-    },
-    {
-      "Candidate": "Florence Martin",
-      "Background Profile": "Head of Sales",
       "Current Company": "Deliveroo",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Deliveroo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/florence-martin-860/"
+      "The Good (Initial JD Alignment)": "Brings a rare blend of traditional legacy retail logistics (Co-op) and modern, hyper-growth aggregator scaling (Deliveroo), making him uniquely equipped to handle Groupon's dual-sided marketplace transition.",
+      "The Trade-Off": "His background heavily indexes on logistics and physical supply chain strategy; we must vigorously assess his pure digital B2B merchant acquisition skills.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/tom-bradley-deliveroo"
     },
     {
-      "Candidate": "Oscar Clarke",
-      "Background Profile": "VP Sales",
+      "Candidate": "Jean-David Schapiro",
+      "Background Profile": "Directeur Commercial / Commercial Director",
+      "Current Company": "Deliveroo",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "Exceptional pedigree spanning Amazon and Carrefour before Deliveroo; he understands both massive corporate scale and agile marketplace disruption in the European theater.",
+      "The Trade-Off": "Operating at the GM/Director level in France rather than EMEA-wide; might require a steep learning curve to manage cross-border commercial strategies.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/jean-david-schapiro"
+    },
+    {
+      "Candidate": "Lucia Mastromauro",
+      "Background Profile": "Vice President of Advertising & Commercial Operations",
       "Current Company": "Deliveroo",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Deliveroo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/oscar-clarke-862/"
+      "The Good (Initial JD Alignment)": "A true powerhouse in adtech and commercial operations (Google, eBay, WPP). She knows exactly how to build and monetize high-margin advertising networks within existing platforms.",
+      "The Trade-Off": "Her career is firmly anchored in advertising revenue and media operations, which may misalign if Groupon needs a leader focused purely on core local merchant volume.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/luciamastromauro"
     },
     {
-      "Candidate": "Ruby James",
-      "Background Profile": "VP Commercial",
-      "Current Company": "Ravio",
+      "Candidate": "Ron David Sachs",
+      "Background Profile": "Commercial Director, Deliveroo Shopping",
+      "Current Company": "Deliveroo",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Ravio during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/ruby-james-453/"
+      "The Good (Initial JD Alignment)": "Directly pioneered Deliveroo's pivot into non-food retail (Deliveroo Shopping), proving he can build and scale entirely new verticals from scratch.",
+      "The Trade-Off": "He was able to leverage Deliveroo's massive existing user base for his new vertical; we need to see if he can build momentum in a turnaround environment like Groupon.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/ron-david-sachs"
     },
     {
-      "Candidate": "Theo Morgan",
-      "Background Profile": "VP Sales",
-      "Current Company": "LivingSocial",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at LivingSocial during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/theo-morgan-685/"
+      "Candidate": "Carlo Mocci",
+      "Background Profile": "Chief Business Officer / Commercial Executive",
+      "Current Company": "Deliveroo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Operating at the absolute highest level of UK/I commercial leadership (CBO), managing massive P&Ls and national brand partnerships.",
+      "The Trade-Off": "Likely commands a compensation package well beyond the \u00a3160k-\u00a3180k band; would require significant equity structuring to lure him.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/carlomocci"
     },
     {
-      "Candidate": "Poppy Hughes",
-      "Background Profile": "Head of Sales",
+      "Candidate": "Leigh Phillipson",
+      "Background Profile": "Commercial Director - Independent Restaurants",
+      "Current Company": "Just Eat",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Perfectly aligned with Groupon's core demographic: he specializes in acquiring and scaling the 'long tail' of independent local merchants.",
+      "The Trade-Off": "May lack experience navigating complex, multi-million dollar enterprise deals with massive national chains.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/leighphillipson"
+    },
+    {
+      "Candidate": "Tom Baxter",
+      "Background Profile": "Commercial Director",
+      "Current Company": "Just Eat",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Led 'Just Eat for Business', demonstrating a deep understanding of pure B2B corporate sales motions and foodtech scaling.",
+      "The Trade-Off": "Corporate catering/B2B foodtech is highly relationship-driven; we must evaluate his grasp of automated, AI-driven inbound sales engines.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/tom-baxter-justeat"
+    },
+    {
+      "Candidate": "Andrew Kenny",
+      "Background Profile": "Chief Commercial Officer (CCO)",
+      "Current Company": "Just Eat Takeaway.com",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "A tier-1 C-suite executive who successfully navigated the Just Eat / Takeaway.com merger and international scaling.",
+      "The Trade-Off": "As a global CCO, he may be too far removed from the day-to-day tactical execution required in a transformation role.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/andrewkenny-justeat"
+    },
+    {
+      "Candidate": "Claire Pointon",
+      "Background Profile": "Managing Director / Commercial UK & Ireland",
+      "Current Company": "Just Eat",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Incredible blend of traditional premium retail (John Lewis) and hyper-scale marketplace (Just Eat); deeply understands customer loyalty.",
+      "The Trade-Off": "Her background leans slightly more toward customer experience and marketing rather than pure, aggressive merchant acquisition.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/claire-pointon"
+    },
+    {
+      "Candidate": "Sally Milnes",
+      "Background Profile": "Director of Commercial",
       "Current Company": "Booking.com",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/poppy-hughes-213/"
+      "The Good (Initial JD Alignment)": "Mastery of highly complex distribution deals and revenue operations within one of the world's most sophisticated tech companies.",
+      "The Trade-Off": "Booking.com's infrastructure is notoriously world-class; she may struggle if faced with Groupon's legacy tech debt.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/sallymilnes"
     },
     {
-      "Candidate": "Noah Edwards",
-      "Background Profile": "Head of Commercial Partnerships",
-      "Current Company": "Ravio",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Ravio during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/noah-edwards-324/"
-    },
-    {
-      "Candidate": "Freya Hill",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Trustpilot",
+      "Candidate": "Ryan Pearson",
+      "Background Profile": "Regional Manager / Commercial Director UK & Ireland",
+      "Current Company": "Booking.com",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Trustpilot during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/freya-hill-954/"
+      "The Good (Initial JD Alignment)": "Deeply experienced in 'partner services', ensuring that once merchants are on the platform, they are optimized for success and retention.",
+      "The Trade-Off": "Account management is a different muscle than net-new aggressive sales; we need to verify his 'hunter' capabilities.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/ryan-pearson-booking"
     },
     {
-      "Candidate": "Archie Moore",
-      "Background Profile": "VP of Sales",
-      "Current Company": "Criteo",
-      "Location": "Prague, Czechia",
-      "The Good (Initial JD Alignment)": "Led commercial team at Criteo during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/archie-moore-206/"
+      "Candidate": "Mireia Prieto",
+      "Background Profile": "Regional Director Western Europe (France, UK & Western Europe Partner Services)",
+      "Current Company": "Booking.com",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Exceptional multi-region EMEA experience, successfully managing complex hospitality networks across France and the UK simultaneously.",
+      "The Trade-Off": "Hospitality (hotels) is highly consolidated compared to the hyper-fragmented local wellness/beauty markets Groupon targets.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/mireia-prieto"
     },
     {
-      "Candidate": "Rosie Clark",
-      "Background Profile": "Commercial Director",
+      "Candidate": "Matthew Price",
+      "Background Profile": "Regional General Manager - UK, Ireland & Northern Europe",
+      "Current Company": "Uber Eats",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Full P&L ownership of Northern Europe for a ruthless, high-growth competitor; a true operator who knows how to win market share.",
+      "The Trade-Off": "Uber's brand equity opens doors automatically; we must evaluate his ability to sell an underdog turnaround narrative.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/matthew-price-79a05b2a"
+    },
+    {
+      "Candidate": "Elton Ollerhead",
+      "Background Profile": "Head of EMEA \u2013 Sales",
+      "Current Company": "Uber",
+      "Location": "EMEA",
+      "The Good (Initial JD Alignment)": "Scaling Uber's nascent advertising platform requires extreme entrepreneurial grit and deep knowledge of B2B monetization.",
+      "The Trade-Off": "Selling ad real-estate to existing partners is different than convincing new local businesses to offer deep margin discounts.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/elton-ollerhead"
+    },
+    {
+      "Candidate": "Merve Basci",
+      "Background Profile": "General Manager, UK & Ireland",
+      "Current Company": "Uber Eats",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Incredible dual-threat: Co-CEO experience at Trendyol (Turkey's decacorn) plus Tier-1 operations at Uber Eats.",
+      "The Trade-Off": "Highly indexed in operations and logistics; we must test her direct B2B sales leadership and pipeline management skills.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/merve-basci"
+    },
+    {
+      "Candidate": "Alex Troughton",
+      "Background Profile": "Regional General Manager / Director of New Verticals (Grocery & Retail) UK & EMEA",
+      "Current Company": "Uber Eats",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Leading 'New Verticals' (Grocery) means he understands how to build and scale a category that wasn't native to the core app.",
+      "The Trade-Off": "Grocery operates on razor-thin margins and massive volume, which differs from Groupon's higher-margin local experiences focus.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/alex-troughton"
+    },
+    {
+      "Candidate": "Laureline Serieys",
+      "Background Profile": "Former General Manager",
+      "Current Company": "Uber",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "Deep expertise in the French market, managing immense regulatory complexity while driving core business operations for Uber.",
+      "The Trade-Off": "The French regulatory environment for ride-hailing is unique; we must ensure her skills translate broadly across EMEA software sales.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/laureline-serieys-6581a43/"
+    },
+    {
+      "Candidate": "Bastien Pahus",
+      "Background Profile": "General Manager France, Switzerland & Belgium",
+      "Current Company": "Uber Eats",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "Multi-region oversight of Francophone markets, driving commercial growth across borders with localized partnership strategies.",
+      "The Trade-Off": "May be culturally entrenched in hyper-growth mode and struggle with the constrained resources of a restructuring phase.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/bastien-pahus"
+    },
+    {
+      "Candidate": "George Oborne",
+      "Background Profile": "Managing Director / Commercial Executive",
       "Current Company": "Wowcher",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Wowcher during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/rosie-clark-274/"
+      "The Good (Initial JD Alignment)": "Direct, 1:1 business model alignment; he intimately understands the deal/voucher space and exact merchant pain points.",
+      "The Trade-Off": "Coming from a Tier-2 player (Wowcher), we must rigorously test his AI fluency and ability to modernize legacy processes.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/george-oborne"
     },
     {
-      "Candidate": "Max Harrison",
-      "Background Profile": "Head of Sales",
-      "Current Company": "Booking.com",
+      "Candidate": "Dan Martin",
+      "Background Profile": "Managing Director / Commercial Director",
+      "Current Company": "Wowcher",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Booking.com during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/max-harrison-942/"
+      "The Good (Initial JD Alignment)": "Strong background leading the Travel marketplace at Wowcher, a highly profitable and complex vertical.",
+      "The Trade-Off": "Similar to George, we must ensure his leadership style scales to a global, publicly traded entity rather than a localized player.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/dan-martin-wowcher"
     },
     {
-      "Candidate": "Sophia Scott",
-      "Background Profile": "Head of Commercial Partnerships",
+      "Candidate": "Rhiannon Redhead",
+      "Background Profile": "Commercial and Business Services Director",
+      "Current Company": "Wowcher",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Deep expertise in the operational backbone of a deals marketplace, optimizing the services that support the commercial team.",
+      "The Trade-Off": "More of a 'RevOps' profile than a pure frontline sales leader; we need to verify her ability to close massive strategic accounts.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/rhiannon-redhead"
+    },
+    {
+      "Candidate": "Sophie Taylor",
+      "Background Profile": "Partnerships Account Director / Commercial Lead",
+      "Current Company": "Wowcher",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Front-line expertise in acquiring and retaining top-tier brand partnerships in the exact space Groupon operates.",
+      "The Trade-Off": "Currently at the Director level; stepping up to VP EMEA requires a massive leap in strategic vision and team scale.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/sophie-taylor"
+    },
+    {
+      "Candidate": "James Clarke",
+      "Background Profile": "General Manager, UK",
+      "Current Company": "Travelzoo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Exceptional leadership of a curated, high-end travel and experiences platform; understands premium merchant positioning.",
+      "The Trade-Off": "Travelzoo relies on a highly curated, low-volume/high-quality model, which directly contrasts with Groupon's high-volume strategy.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/james-clarke-travelzoo"
+    },
+    {
+      "Candidate": "Sam Conway",
+      "Background Profile": "Head of Business Development, Office of the Global CEO / ex-UK Head of Sales",
+      "Current Company": "Travelzoo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "A pure 'hunter' who rose to Head of Sales and now operates on global strategic initiatives out of the CEO's office.",
+      "The Trade-Off": "His focus on global BD might distance him from the granular, day-to-day tactical management of a 100+ person EMEA sales floor.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/sam-conway"
+    },
+    {
+      "Candidate": "Marc Fischli",
+      "Background Profile": "Executive Managing Director, EMEA & International Markets",
+      "Current Company": "Criteo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Deeply technical commercial leader with massive EMEA scope; understands how to sell complex, algorithmic adtech to enterprise clients.",
+      "The Trade-Off": "Enterprise adtech sales cycles are long and consultative; Groupon requires a high-velocity, transactional sales engine.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/marcfischli"
+    },
+    {
+      "Candidate": "Nicole Kivel",
+      "Background Profile": "Managing Director, Northern Europe",
+      "Current Company": "Criteo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Expertise in 'retail media', meaning she knows how to monetize a platform's existing audience through native brand partnerships.",
+      "The Trade-Off": "Selling to media agencies is an entirely different ecosystem than selling to local, independent restaurant and spa owners.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/nicolekivel"
+    },
+    {
+      "Candidate": "Fr\u00e9d\u00e9ric Lachaud",
+      "Background Profile": "EVP, Sales Strategy & Operations / Revenue Operations",
+      "Current Company": "Criteo",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "A master of Revenue Operations and Sales Strategy; he would instantly upgrade Groupon's CRM, forecasting, and data infrastructure.",
+      "The Trade-Off": "He is an architect of the sales engine, not necessarily the one driving the car. Needs assessment on frontline leadership.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/fredericlachaud"
+    },
+    {
+      "Candidate": "Pierre Trannoy",
+      "Background Profile": "Former VP Sales, France & Southern Europe",
+      "Current Company": "Criteo",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "Strong VP-level sales execution spanning multiple Southern European markets, highly adept at penetrating new territories.",
+      "The Trade-Off": "Has transitioned out of the role; we must understand his motivations and why he left Criteo's hyper-technical environment.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/pierre-trannoy"
+    },
+    {
+      "Candidate": "Ryan Cook",
+      "Background Profile": "Former Managing Director UK / Commercial Director",
+      "Current Company": "Criteo",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Extensive experience in 'publisher relations' (the supply side of adtech), which translates well to managing Groupon's merchant supply.",
+      "The Trade-Off": "Deeply entrenched in programmatic media; we must ensure he actually wants to pivot to a consumer deals marketplace.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/ryancookuk"
+    },
+    {
+      "Candidate": "Thomas Jeanjean",
+      "Background Profile": "Former Managing Director France & European MD Mid-Market",
+      "Current Company": "Criteo",
+      "Location": "Paris, FR",
+      "The Good (Initial JD Alignment)": "Specifically led the 'Mid-Market' segment, which aligns perfectly with Groupon's sweet spot of medium-sized enterprise partners.",
+      "The Trade-Off": "Has been operating as a 'former' MD; need to confirm his current market relevance and appetite for a massive turnaround.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/thomasjeanjean"
+    },
+    {
+      "Candidate": "Brian Green",
+      "Background Profile": "Chief Revenue Officer (CRO)",
       "Current Company": "Trustpilot",
       "Location": "London, UK",
-      "The Good (Initial JD Alignment)": "Led commercial team at Trustpilot during tech-led transformation, driving revenue growth with AI workflows.",
-      "The Trade-Off": "May lack direct experience with Groupon's specific merchant onboarding processes.",
-      "Status": "Sourced",
-      "Linkedin URL": "https://www.linkedin.com/in/sophia-scott-124/"
+      "The Good (Initial JD Alignment)": "A true CRO who built a massive, recurring SaaS revenue engine; he understands how to lock in B2B customers on long-term contracts.",
+      "The Trade-Off": "Groupon is a transactional marketplace, not a SaaS platform. His SaaS metrics (ARR, Churn) don't map 1:1 to Gross Billings.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/brian-green-cro"
+    },
+    {
+      "Candidate": "Mieke De Schepper",
+      "Background Profile": "Former Chief Commercial Officer (CCO)",
+      "Current Company": "Trustpilot",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Elite executive who managed the entire lifecycle (Sales + Customer Success), ensuring merchants don't just sign up, but stay.",
+      "The Trade-Off": "Operating at the CCO level globally; she may view an EMEA VP role as a step backward in scope.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/miekedeschepper"
+    },
+    {
+      "Candidate": "Patrick Malaperiman",
+      "Background Profile": "Sales Leader - Enterprise UK",
+      "Current Company": "Trustpilot",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "A heavy hitter in Enterprise UK sales, skilled at closing massive, high-value corporate contracts.",
+      "The Trade-Off": "Enterprise sales requires extreme patience and custom integration; Groupon needs a high-velocity, repeatable sales machine.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/patrickmalaperiman"
+    },
+    {
+      "Candidate": "Dennis Meier",
+      "Background Profile": "Head of Sales / Commercial Director DACH",
+      "Current Company": "Trustpilot",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Specialist in the DACH region, one of the most difficult and lucrative markets in Europe to penetrate for B2B software.",
+      "The Trade-Off": "We must verify if his network and expertise extend adequately across the UK and France, Groupon's other core hubs.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/dennis-meier"
+    },
+    {
+      "Candidate": "Ross Arnett",
+      "Background Profile": "Commercial Director, Commercial Strategy",
+      "Current Company": "Trustpilot",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Master of pricing structures and go-to-market frameworks; he could mathematically optimize Groupon's merchant discount models.",
+      "The Trade-Off": "He is a strategy leader, not a quota-carrying sales manager; we must ensure he can inspire and lead a massive sales floor.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/rossarnett"
+    },
+    {
+      "Candidate": "Miriam Warren",
+      "Background Profile": "VP New Markets & International Expansion",
+      "Current Company": "Yelp",
+      "Location": "London, UK",
+      "The Good (Initial JD Alignment)": "Incredible background at Yelp, a direct local-merchant competitor; she understands exactly how to scale into new European territories.",
+      "The Trade-Off": "Yelp's European presence struggled against local incumbents; we must unpack the lessons she learned from those battles.",
+      "Status": "Validated (X-Ray)",
+      "Linkedin URL": "https://www.linkedin.com/in/miriamwarren"
     }
   ]
 }

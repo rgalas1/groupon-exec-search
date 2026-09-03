@@ -288,11 +288,7 @@
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="Search candidate, company, or notes..." oninput="filterCandidates()">
                 </div>
-                <div class="filter-group">
-                    <select id="profile-filter" class="filter-select" onchange="filterCandidates()">
-                        <option value="ALL">All Profile Archetypes</option>
-                    </select>
-                </div>
+
             </div>
             <div id="loading-state" style="font-family: var(--font-heading); padding: 2rem; text-align: center;">Loading live pipeline...</div>
             <div class="kanban-board" id="kanban-board"></div>
@@ -780,7 +776,6 @@
 
         function filterCandidates() {
             const query = document.getElementById('search-input').value.toLowerCase();
-            const profileFilter = document.getElementById('profile-filter').value;
             const filtered = candidateData.filter(item => {
                 const matchesSearch = (
                     item.Candidate.toLowerCase().includes(query) ||
@@ -788,11 +783,7 @@
                     item.TheGood.toLowerCase().includes(query) ||
                     item.Location.toLowerCase().includes(query)
                 );
-                let matchesProfile = true;
-                if (profileFilter !== 'ALL') {
-                    matchesProfile = (item.BackgroundProfile === profileFilter);
-                }
-                return matchesSearch && matchesProfile;
+                return matchesSearch;
             });
             renderKanban(filtered);
         }
@@ -837,9 +828,17 @@
 
             const mgrExecComps = data.filter(d => (d.level === 'VP' || d.level === 'Director' || d.level === 'Manager') && d.minComp);
             if(mgrExecComps.length > 0) {
-                const avg = mgrExecComps.reduce((acc, curr) => acc + (curr.minComp + curr.maxComp)/2, 0) / mgrExecComps.length;
-                document.getElementById('kpi-avg-salary').innerText = '$' + Math.round(avg/1000) + 'k';
-                document.getElementById('target-role-benchmark').innerText = '$' + Math.round(avg/1000) + 'k Base';
+                const avg = mgrExecComps.reduce((acc, curr) => {
+                    let min = curr.minComp;
+                    let max = curr.maxComp;
+                    if (curr.location.includes('Prague') || curr.location.includes('CZ')) {
+                        min = min / 30; // convert CZK to GBP for global avg
+                        max = max / 30;
+                    }
+                    return acc + (min + max)/2;
+                }, 0) / mgrExecComps.length;
+                document.getElementById('kpi-avg-salary').innerText = '£' + Math.round(avg/1000) + 'k (Avg)';
+                document.getElementById('target-role-benchmark').innerText = '£' + Math.round(avg/1000) + 'k Base (UK Eq)';
             } else {
                 document.getElementById('kpi-avg-salary').innerText = '-';
                 document.getElementById('target-role-benchmark').innerText = 'Benchmark Data Unavailable';
@@ -878,6 +877,43 @@
             });
         }
 
+        
+        
+        window.displayCurrency = 'GBP';
+        function toggleCurrency() {
+            window.displayCurrency = window.displayCurrency === 'GBP' ? 'LOCAL' : 'GBP';
+            document.getElementById('currencyToggleBtn').innerText = window.displayCurrency === 'GBP' ? 'Switch to Local Currency' : 'Switch to GBP Benchmark';
+            updateDashboardView();
+            populateTable();
+            populateVPSection();
+        }
+
+        function formatComp(amount, location) {
+            if (!amount) return 'Not Disclosed';
+            if (window.displayCurrency === 'LOCAL' && location && (location.includes('Prague') || location.includes('CZ'))) {
+                return (amount / 1000000).toFixed(1).replace('.0', '') + 'M Kč';
+            }
+            // If GBP mode and it's a CZ role, we divide by 30 to show GBP equivalent
+            if (window.displayCurrency === 'GBP' && location && (location.includes('Prague') || location.includes('CZ'))) {
+                return '£' + Math.round((amount / 30) / 1000) + 'k';
+            }
+            return '£' + Math.round(amount/1000) + 'k';
+        }
+        
+        function formatCompFull(amount, location) {
+            if (!amount) return 'Confidential / Unlisted';
+            if (window.displayCurrency === 'LOCAL' && location && (location.includes('Prague') || location.includes('CZ'))) {
+                return amount.toLocaleString() + ' Kč';
+            }
+            if (window.displayCurrency === 'GBP' && location && (location.includes('Prague') || location.includes('CZ'))) {
+                return '£' + Math.round(amount / 30).toLocaleString();
+            }
+            return '£' + amount.toLocaleString();
+        }
+
+            return '£' + amount.toLocaleString();
+        }
+
         function getLevelBadge(level) {
             return `<span class="intel-badge">${level}</span>`;
         }
@@ -893,7 +929,7 @@
             const tbody = document.getElementById('rolesTableBody');
             tbody.innerHTML = '';
             liveData.forEach(role => {
-                const compStr = role.minComp ? `$${Math.round(role.minComp/1000)}k - $${Math.round(role.maxComp/1000)}k` : 'Not Disclosed';
+                const compStr = role.minComp ? formatComp(role.minComp, role.location) + ' - ' + formatComp(role.maxComp, role.location) : 'Not Disclosed';
                 tbody.innerHTML += `
                     <tr>
                         <td style="font-weight:600;">${role.company}</td>
@@ -903,7 +939,7 @@
                         <td>${role.location}</td>
                         <td>${role.region}</td>
                         <td style="font-weight:600; color: var(--success);">${compStr}</td>
-                        <td><a href="${role.url}" target="_blank" class="live-btn">View ATS</a></td>
+                        
                     </tr>
                 `;
             });
@@ -928,7 +964,7 @@
             container.innerHTML = ``;
             
             vpRoles.forEach(role => {
-                const compStr = role.minComp ? `$${(role.minComp).toLocaleString()} - $${(role.maxComp).toLocaleString()}` : 'Confidential / Unlisted';
+                const compStr = role.minComp ? formatCompFull(role.minComp, role.location) + ' - ' + formatCompFull(role.maxComp, role.location) : 'Confidential / Unlisted';
                 container.innerHTML += `
                     <div class="comp-card">
                         <div style="display:flex; justify-content: space-between;">
@@ -942,7 +978,7 @@
                             <span>Location: ${role.location}</span>
                             <span>Function: ${role.function}</span>
                         </div>
-                        <a href="${role.url}" target="_blank" class="live-btn">Verify ATS Posting</a>
+                        
                     </div>
                 `;
             });
