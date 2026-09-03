@@ -304,11 +304,7 @@
             
             <!-- Dynamic Region Toggle -->
             <div class="region-toggle-container">
-                <button class="region-btn active" onclick="setRegion('Global', this)">Global View</button>
-                <button class="region-btn" onclick="setRegion('US', this)">US Only</button>
-                <button class="region-btn" onclick="setRegion('LATAM', this)">LATAM Only</button>
-                <button class="region-btn" onclick="setRegion('EMEA', this)">EMEA Only</button>
-            </div>
+                </div>
 
             <!-- Dynamic KPIs -->
             <div class="dashboard-grid">
@@ -608,15 +604,7 @@
                             });
                         }
                         
-                        // Populate Profile Filters
-                        const profiles = [...new Set(candidateData.map(c => c.BackgroundProfile).filter(p => p !== ''))];
-                        const filterSelect = document.getElementById('profile-filter');
-                        profiles.forEach(p => {
-                            const option = document.createElement('option');
-                            option.value = p;
-                            option.innerText = p;
-                            filterSelect.appendChild(option);
-                        });
+
 
                         renderKanban();
                         renderStackRank();
@@ -908,9 +896,6 @@
             if (window.displayCurrency === 'GBP' && location && (location.includes('Prague') || location.includes('CZ'))) {
                 return '£' + Math.round(amount / 30).toLocaleString();
             }
-            return '£' + amount.toLocaleString();
-        }
-
             return '£' + amount.toLocaleString();
         }
 
