@@ -184,7 +184,7 @@
         .card { background: var(--card-bg); border: none; border-radius: 4px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(22,23,15,0.05), 0 1px 3px rgba(22,23,15,0.03); }
         .card-header { margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
         .card-header h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin: 0; font-family: var(--font-heading); text-transform: uppercase; }
-        .kpi-card { grid-column: span 3; display: flex; flex-direction: column; justify-content: center; }
+        .kpi-card { grid-column: span 4; display: flex; flex-direction: column; justify-content: center; }
         .kpi-value { font-size: 2.5rem; font-weight: 700; color: var(--brand-teal); line-height: 1.2; }
         .kpi-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
         .chart-card-large { grid-column: span 8; }
@@ -310,19 +310,15 @@
             <div class="dashboard-grid">
                 <div class="card kpi-card">
                     <div class="kpi-value" id="kpi-total-roles">-</div>
-                    <div class="kpi-label">Verified Open Roles</div>
+                    <div class="kpi-label">Verified Benchmarks</div>
                 </div>
                 <div class="card kpi-card">
-                    <div class="kpi-value" id="kpi-avg-salary">-</div>
-                    <div class="kpi-label">Avg. Base Salary</div>
+                    <div class="kpi-value" id="kpi-avg-salary-london">-</div>
+                    <div class="kpi-label">Avg Base (London)</div>
                 </div>
                 <div class="card kpi-card">
-                    <div class="kpi-value" id="kpi-remote-pct">-</div>
-                    <div class="kpi-label">% Remote Flexibility</div>
-                </div>
-                <div class="card kpi-card">
-                    <div class="kpi-value" id="kpi-transparency">-</div>
-                    <div class="kpi-label">Comp Transparency</div>
+                    <div class="kpi-value" id="kpi-avg-salary-prague">-</div>
+                    <div class="kpi-label">Avg Base (Prague)</div>
                 </div>
             </div>
 
@@ -808,11 +804,22 @@
             
             document.getElementById('kpi-total-roles').innerText = data.length;
             
-            const remoteRoles = data.filter(d => d.location.includes('Remote') || d.location.includes('Hybrid')).length;
-            document.getElementById('kpi-remote-pct').innerText = data.length > 0 ? Math.round((remoteRoles / data.length) * 100) + '%' : '0%';
-            
-            const compRoles = data.filter(d => d.minComp);
-            document.getElementById('kpi-transparency').innerText = data.length > 0 ? Math.round((compRoles.length / data.length) * 100) + '%' : '0%';
+            const lonComps = data.filter(d => (d.location.includes('London') || d.location.includes('UK')) && d.minComp);
+            if(lonComps.length > 0) {
+                const avgLon = lonComps.reduce((acc, curr) => acc + (curr.minComp + curr.maxComp)/2, 0) / lonComps.length;
+                document.getElementById('kpi-avg-salary-london').innerText = '£' + Math.round(avgLon/1000) + 'k';
+            } else {
+                document.getElementById('kpi-avg-salary-london').innerText = '-';
+            }
+
+            const prgComps = data.filter(d => (d.location.includes('Prague') || d.location.includes('CZ')) && d.minComp);
+            if(prgComps.length > 0) {
+                const avgPrg = prgComps.reduce((acc, curr) => acc + (curr.minComp + curr.maxComp)/2, 0) / prgComps.length;
+                const avgPrgGbp = avgPrg / 30; // CZK to GBP
+                document.getElementById('kpi-avg-salary-prague').innerText = '£' + Math.round(avgPrgGbp/1000) + 'k (Eq)';
+            } else {
+                document.getElementById('kpi-avg-salary-prague').innerText = '-';
+            }
 
             const mgrExecComps = data.filter(d => (d.level === 'VP' || d.level === 'Director' || d.level === 'Manager') && d.minComp);
             if(mgrExecComps.length > 0) {
@@ -820,15 +827,13 @@
                     let min = curr.minComp;
                     let max = curr.maxComp;
                     if (curr.location.includes('Prague') || curr.location.includes('CZ')) {
-                        min = min / 30; // convert CZK to GBP for global avg
+                        min = min / 30; // convert CZK to GBP
                         max = max / 30;
                     }
                     return acc + (min + max)/2;
                 }, 0) / mgrExecComps.length;
-                document.getElementById('kpi-avg-salary').innerText = '£' + Math.round(avg/1000) + 'k (Avg)';
                 document.getElementById('target-role-benchmark').innerText = '£' + Math.round(avg/1000) + 'k Base (UK Eq)';
             } else {
-                document.getElementById('kpi-avg-salary').innerText = '-';
                 document.getElementById('target-role-benchmark').innerText = 'Benchmark Data Unavailable';
             }
 
