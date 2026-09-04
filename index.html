@@ -693,7 +693,7 @@
                             <div class="candidate-name">${c.Candidate}</div>
                             <div class="candidate-meta">${c.CurrentCompany} • ${c.Location}</div>
                             ${c.Verticals ? `<div class="candidate-meta" style="margin-top:-5px; font-weight:600; color:var(--text-muted);">Verticals: ${c.Verticals}</div>` : ''}
-                            ${viewMode === 'strategic' ? `<div class="candidate-meta" style="margin-top:-5px; font-weight:600; color:var(--primary-color);">Rank Bucket: ${c.StackRankBucket || 'N/A'}</div>` : ''}
+
                             <div class="card-preview">${c.TheGood}</div>
                             <div class="card-actions">
                                 <button class="btn-action btn-view" onclick="openModal(${candidateData.indexOf(c)})">Notes</button>
