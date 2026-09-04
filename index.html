@@ -284,11 +284,16 @@
                     </div>
                 </div>
             </div>
-            <div class="controls-panel">
-                <div class="search-box">
+            <div class="controls-panel" style="display: flex; gap: 15px; align-items: center; justify-content: space-between;">
+                <div class="search-box" style="flex: 1;">
                     <input type="text" id="search-input" placeholder="Search candidate, company, or notes..." oninput="filterCandidates()">
                 </div>
-
+                <div class="view-toggle">
+                    <select id="kanban-view-select" onchange="renderKanban()" style="padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: var(--font-heading); font-size: 0.9rem; font-weight: 600; cursor: pointer; outline: none; background: #fff; color: var(--text-color);">
+                        <option value="pipeline">View: Standard Pipeline</option>
+                        <option value="strategic">View: Strategic Archetypes</option>
+                    </select>
+                </div>
             </div>
             <div id="loading-state" style="font-family: var(--font-heading); padding: 2rem; text-align: center;">Loading live pipeline...</div>
             <div class="kanban-board" id="kanban-board"></div>
@@ -588,7 +593,8 @@
                                     Location: row['Location'] || '',
                                     TheGood: row['The Good (Initial JD Alignment)'] || row['The Good'] || 'No notes provided.',
                                     TheTradeOff: row['The Trade-Off'] || 'None noted.',
-                                    Status: normalizeStatus(row['Status']),
+                                    RawStatus: row['Status'] || '',
+                                    Archetype: row['Archetype'] || row['Strategic Archetype'] || '',
                                     LinkedIn: formatUrl(rawLinkedIn),
                                     StackRankBucket: row['Stank Rank Bucket'] || row['Stack Rank Bucket'] || '',
                                     CalibratedScore: row['Calibrated Score'] || '',
@@ -615,17 +621,31 @@
             }
         }
         // --- KANBAN LOGIC ---
-        const stages = ["Mapped (Pre-Outreach)", "Outreach Active", "Screening (Recruiter)", "Hiring Manager Review", "Keep Warm / Bench", "Archived"];
+        const pipelineStages = ["Mapped (Pre-Outreach)", "Outreach Active", "Screening (Recruiter)", "Hiring Manager Review", "Keep Warm / Bench", "Archived"];
+        const strategicStages = ["JD Purists", "AI & Transformation", "Wild Cards", "Archived"];
 
-        function normalizeStatus(rawStatus) {
-            if (!rawStatus) return stages[0];
-            let lower = String(rawStatus).toLowerCase();
-            if (lower.includes('outreach')) return stages[1];
-            if (lower.includes('screen')) return stages[2];
-            if (lower.includes('hiring') || lower.includes('review') || lower.includes('manager')) return stages[3];
-            if (lower.includes('warm') || lower.includes('bench')) return stages[4];
-            if (lower.includes('archiv') || lower.includes('pass') || lower.includes('reject')) return stages[5];
-            return stages[0]; 
+        function normalizeStatus(candidate, viewMode) {
+            if (viewMode === 'strategic') {
+                let arch = String(candidate.Archetype || '').toLowerCase();
+                if (arch.includes('purist')) return strategicStages[0];
+                if (arch.includes('ai') || arch.includes('transformation')) return strategicStages[1];
+                if (arch.includes('wild') || arch.includes('value')) return strategicStages[2];
+                if (arch.includes('archiv') || arch.includes('pass') || arch.includes('reject')) return strategicStages[3];
+                // Fallback based on pipeline status if no archetype is set
+                let lowerStatus = String(candidate.RawStatus || '').toLowerCase();
+                if (lowerStatus.includes('archiv') || lowerStatus.includes('pass') || lowerStatus.includes('reject')) return strategicStages[3];
+                return strategicStages[0]; // Default
+            } else {
+                let rawStatus = candidate.RawStatus;
+                if (!rawStatus) return pipelineStages[0];
+                let lower = String(rawStatus).toLowerCase();
+                if (lower.includes('outreach')) return pipelineStages[1];
+                if (lower.includes('screen')) return pipelineStages[2];
+                if (lower.includes('hiring') || lower.includes('review') || lower.includes('manager')) return pipelineStages[3];
+                if (lower.includes('warm') || lower.includes('bench')) return pipelineStages[4];
+                if (lower.includes('archiv') || lower.includes('pass') || lower.includes('reject')) return pipelineStages[5];
+                return pipelineStages[0]; 
+            }
         }
 
         function forceOpenLink(url) {
@@ -653,8 +673,13 @@
         function renderKanban(dataToRender = candidateData) {
             const board = document.getElementById('kanban-board');
             board.innerHTML = '';
-            stages.forEach(stage => {
-                const stageCards = dataToRender.filter(c => c.Status === stage);
+            
+            const viewModeEl = document.getElementById('kanban-view-select');
+            const viewMode = viewModeEl ? viewModeEl.value : 'pipeline';
+            const activeStages = viewMode === 'strategic' ? strategicStages : pipelineStages;
+
+            activeStages.forEach(stage => {
+                const stageCards = dataToRender.filter(c => normalizeStatus(c, viewMode) === stage);
                 let colHTML = `
                     <div class="kanban-column">
                         <div class="kanban-header">
@@ -668,6 +693,7 @@
                             <div class="candidate-name">${c.Candidate}</div>
                             <div class="candidate-meta">${c.CurrentCompany} • ${c.Location}</div>
                             ${c.Verticals ? `<div class="candidate-meta" style="margin-top:-5px; font-weight:600; color:var(--text-muted);">Verticals: ${c.Verticals}</div>` : ''}
+                            ${viewMode === 'strategic' ? `<div class="candidate-meta" style="margin-top:-5px; font-weight:600; color:var(--primary-color);">Rank Bucket: ${c.StackRankBucket || 'N/A'}</div>` : ''}
                             <div class="card-preview">${c.TheGood}</div>
                             <div class="card-actions">
                                 <button class="btn-action btn-view" onclick="openModal(${candidateData.indexOf(c)})">Notes</button>
